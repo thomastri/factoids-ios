@@ -21,8 +21,10 @@ class ViewController: UIViewController {
  
      */
     @IBOutlet weak var factoidLabel: UILabel!
+    @IBOutlet weak var factoidButton: UIButton!
     
     let factProvider = FactProvider()
+    let colorProvider = BackgroundColorProvider()
     
     override func viewDidLoad() {
         super.viewDidLoad() // any code they write gets run before our code
@@ -39,7 +41,10 @@ class ViewController: UIViewController {
     @IBAction func showFact() {
         
         factoidLabel.text = factProvider.randomFact()
+        
+        let randomColor = colorProvider.randomColors()
+        view.backgroundColor = randomColor
+        factoidButton.tintColor = randomColor
     }
-
 }
 
