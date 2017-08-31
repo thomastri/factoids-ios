@@ -63,6 +63,7 @@
                     <connections>
                         <outlet property="factoidButton" destination="MmP-mj-B6T" id="iiw-9C-CwS"/>
                         <outlet property="factoidLabel" destination="w9A-ma-8LO" id="Gmz-pb-On0"/>
+                        <outlet property="factoidNumber" destination="oSD-mq-F8d" id="awP-wb-bqZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

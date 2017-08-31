@@ -22,8 +22,9 @@ class ViewController: UIViewController {
      */
     @IBOutlet weak var factoidLabel: UILabel!
     @IBOutlet weak var factoidButton: UIButton!
+    @IBOutlet weak var factoidNumber: UILabel!
     
-    let factProvider = FactProvider()
+    var factProvider = FactProvider()
     let colorProvider = BackgroundColorProvider()
     
     override func viewDidLoad() {
@@ -45,6 +46,7 @@ class ViewController: UIViewController {
         let randomColor = colorProvider.randomColors()
         view.backgroundColor = randomColor
         factoidButton.tintColor = randomColor
+        factoidNumber.text = "Factoid # \(factProvider.getFactNum()):"
     }
 }
 
