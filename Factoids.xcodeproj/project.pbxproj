@@ -16,6 +16,7 @@
 		625561D41F57515200AA1C89 /* FactoidsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625561D31F57515200AA1C89 /* FactoidsUITests.swift */; };
 		625561E21F58539500AA1C89 /* FactProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625561E11F58539500AA1C89 /* FactProvider.swift */; };
 		625561E41F58865200AA1C89 /* BackgroundColorProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625561E31F58865200AA1C89 /* BackgroundColorProvider.swift */; };
+		625561E61F5894C400AA1C89 /* README.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 625561E51F5894C400AA1C89 /* README.rtf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		625561D51F57515200AA1C89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		625561E11F58539500AA1C89 /* FactProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FactProvider.swift; sourceTree = "<group>"; };
 		625561E31F58865200AA1C89 /* BackgroundColorProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackgroundColorProvider.swift; sourceTree = "<group>"; };
+		625561E51F5894C400AA1C89 /* README.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = README.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				625561BC1F57515200AA1C89 /* LaunchScreen.storyboard */,
 				625561BF1F57515200AA1C89 /* Info.plist */,
 				625561E31F58865200AA1C89 /* BackgroundColorProvider.swift */,
+				625561E51F5894C400AA1C89 /* README.rtf */,
 			);
 			path = Factoids;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			files = (
 				625561BE1F57515200AA1C89 /* LaunchScreen.storyboard in Resources */,
 				625561BB1F57515200AA1C89 /* Assets.xcassets in Resources */,
+				625561E61F5894C400AA1C89 /* README.rtf in Resources */,
 				625561B91F57515200AA1C89 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

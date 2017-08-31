@@ -77,8 +77,30 @@ struct FactProvider {
         "To know when to mate, a male giraffe will continuously headbutt the female in the bladder until she urinates. The male then tastes the pee and that helps it determine whether the female is ovulating. ",
         "The Spanish national anthem has no words.",
         "The state sport of Maryland is jousting. ",
-        "Dead people can get goose bumps"
+        "Dead people can get goose bumps.",
+        "The dashed lines in between lanes on the road are about 10 feet long.",
+        "Crows can caw in different dialects depending on where they are from.",
+        "Bamboo can grow up to three feet in one day",
+        "Eating 1,400 Slim Jims in one sitting will kill the average human."
     ]
+    
+    let fakes = [
+        "Nuclear bombs can't pop balloons.",
+        "Ducks can laugh depending on the kind of music you play them.",
+        "Laughing for 30 seconds is equivalent to doing 15 sit ups.",
+        "Before Will Smith was on Fresh Prince of Bel Air, he was a hot dog salesman.",
+        "SpaceX's first rocketship was named Mickey-09, after founder Elon Musk's dog, Mickey.",
+        "You can eat 1,400 ",
+        "Swans have best friends.",
+        "If our solar system had an additional planet the size of Earth, the gravitational shift will cause our days to be 27 hours each.",
+        "There are more hot dog stands in North America than cells in your body."
+    ]
+    
+    mutating func randomFake() -> String {
+        randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: fakes.count)
+        
+        return fakes[randomNumber]
+    }
     
     mutating func randomFact() -> String {
         randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: facts.count)
