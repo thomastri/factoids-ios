@@ -24,6 +24,13 @@ class FactoidsTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let count = 50
+        var index = 0
+        while index < count {
+            print(FactProvider().getFactOrFake())
+            index += 1
+            
+        }
     }
     
     func testPerformanceExample() {

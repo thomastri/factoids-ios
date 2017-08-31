@@ -29,14 +29,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MmP-mj-B6T">
-                                <rect key="frame" x="36" y="547" width="303" height="40"/>
+                                <rect key="frame" x="36" y="547" width="123" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Tal-BQ-qu5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="tintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Gimme a new Factoid!"/>
+                                <state key="normal" title="Fact!"/>
                                 <connections>
                                     <action selector="showFact" destination="BYZ-38-t0r" eventType="touchUpInside" id="MPX-RO-ess"/>
                                 </connections>
@@ -47,14 +47,38 @@
                                 <color key="textColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgX-8a-Qg8">
+                                <rect key="frame" x="277" y="62" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="0.74884463028169013" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oN-AB-ydw">
+                                <rect key="frame" x="216" y="547" width="123" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ftm-uS-ISD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Fake!"/>
+                                <connections>
+                                    <action selector="fakeFactPress" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y6g-Hk-sEc"/>
+                                    <action selector="showFact" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Sr-lJ-NMI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.3529411764705882" green="0.73333333333333328" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="MmP-mj-B6T" firstAttribute="trailing" secondItem="w9A-ma-8LO" secondAttribute="trailing" id="1Rf-sT-QWG"/>
+                            <constraint firstItem="1oN-AB-ydw" firstAttribute="leading" secondItem="MmP-mj-B6T" secondAttribute="trailing" constant="57" id="Whj-aa-Eno"/>
                             <constraint firstAttribute="trailingMargin" secondItem="w9A-ma-8LO" secondAttribute="trailing" constant="20" id="X3n-Cc-sUA"/>
                             <constraint firstItem="MmP-mj-B6T" firstAttribute="leading" secondItem="w9A-ma-8LO" secondAttribute="leading" id="dl2-3P-bJv"/>
                             <constraint firstItem="w9A-ma-8LO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="doG-y8-cGO"/>
+                            <constraint firstItem="1oN-AB-ydw" firstAttribute="baseline" secondItem="MmP-mj-B6T" secondAttribute="baseline" id="jtr-ep-3rm"/>
                             <constraint firstItem="w9A-ma-8LO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pGt-qX-aNI"/>
+                            <constraint firstItem="MmP-mj-B6T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-90" id="phg-gs-aLH"/>
+                            <constraint firstItem="1oN-AB-ydw" firstAttribute="trailing" secondItem="w9A-ma-8LO" secondAttribute="trailing" id="rWZ-uK-ZcE"/>
                             <constraint firstItem="oSD-mq-F8d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="140" id="rt6-Zg-BKp"/>
                             <constraint firstItem="oSD-mq-F8d" firstAttribute="leading" secondItem="w9A-ma-8LO" secondAttribute="leading" id="wDp-1J-IJd"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MmP-mj-B6T" secondAttribute="bottom" constant="80" id="zS4-eD-nK2"/>
@@ -62,8 +86,10 @@
                     </view>
                     <connections>
                         <outlet property="factoidButton" destination="MmP-mj-B6T" id="iiw-9C-CwS"/>
+                        <outlet property="factoidFakeButton" destination="1oN-AB-ydw" id="1Am-5F-V6n"/>
                         <outlet property="factoidLabel" destination="w9A-ma-8LO" id="Gmz-pb-On0"/>
                         <outlet property="factoidNumber" destination="oSD-mq-F8d" id="awP-wb-bqZ"/>
+                        <outlet property="factoidScore" destination="OgX-8a-Qg8" id="x9H-F6-psW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

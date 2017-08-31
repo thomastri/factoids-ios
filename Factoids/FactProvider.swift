@@ -11,6 +11,8 @@ import GameKit
 struct FactProvider {
     
     var randomNumber = 0
+    var factOrFake = 0
+    var score = 0
     
     let facts = [
         "Ants stretch when they wake up in the morning.",
@@ -90,7 +92,7 @@ struct FactProvider {
         "Laughing for 30 seconds is equivalent to doing 15 sit ups.",
         "Before Will Smith was on Fresh Prince of Bel Air, he was a hot dog salesman.",
         "SpaceX's first rocketship was named Mickey-09, after founder Elon Musk's dog, Mickey.",
-        "You can eat 1,400 ",
+        "You can eat 1,400 slim jims without dying.",
         "Swans have best friends.",
         "If our solar system had an additional planet the size of Earth, the gravitational shift will cause our days to be 27 hours each.",
         "There are more hot dog stands in North America than cells in your body."
@@ -102,14 +104,41 @@ struct FactProvider {
         return fakes[randomNumber]
     }
     
-    mutating func randomFact() -> String {
+    mutating func randomReal() -> String {
         randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: facts.count)
         
         return facts[randomNumber]
     }
     
+    mutating func randomFact() -> String {
+        // exclusive
+        factOrFake = GKRandomSource.sharedRandom().nextInt(upperBound: 2)
+        
+        if (factOrFake == 1) {
+            return randomFake()
+        }
+        
+        return randomReal()
+    }
+    
     func getFactNum() -> Int {
         return randomNumber + 1
+    }
+    
+    func getFactOrFake() -> Int {
+        return factOrFake
+    }
+    
+    mutating func resetScore() -> Void {
+        score = 0
+    }
+    
+    mutating func increaseScore() -> Void {
+        score += 1
+    }
+    
+    func getScore() -> Int {
+        return score
     }
     
     

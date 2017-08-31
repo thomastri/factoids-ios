@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var factoidLabel: UILabel!
     @IBOutlet weak var factoidButton: UIButton!
     @IBOutlet weak var factoidNumber: UILabel!
+    @IBOutlet weak var factoidScore: UILabel!
+    @IBOutlet weak var factoidFakeButton: UIButton!
     
     var factProvider = FactProvider()
     let colorProvider = BackgroundColorProvider()
@@ -47,6 +49,33 @@ class ViewController: UIViewController {
         view.backgroundColor = randomColor
         factoidButton.tintColor = randomColor
         factoidNumber.text = "Factoid # \(factProvider.getFactNum()):"
+        
+        let factOrFake = factProvider.getFactOrFake()
+        factoidScore.text = "Score: \(factProvider.getScore())"
+        
+        if (factOrFake == 0 || factOrFake == 2) {
+            factProvider.increaseScore()
+        } else {
+            factProvider.resetScore()
+        }
+    }
+    
+    @IBAction func fakeFactPress() {
+        factoidLabel.text = factProvider.randomFact()
+        
+        let randomColor = colorProvider.randomColors()
+        view.backgroundColor = randomColor
+        factoidButton.tintColor = randomColor
+        factoidNumber.text = "Factoid # \(factProvider.getFactNum()):"
+        
+        let factOrFake = factProvider.getFactOrFake()
+        factoidScore.text = "Score: \(factProvider.getScore())"
+        
+        if (factOrFake == 1) {
+            factProvider.increaseScore()
+        } else {
+            factProvider.resetScore()
+        }
     }
 }
 
