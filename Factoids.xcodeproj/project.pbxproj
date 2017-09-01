@@ -104,13 +104,13 @@
 			isa = PBXGroup;
 			children = (
 				625561B31F57515200AA1C89 /* AppDelegate.swift */,
+				625561E31F58865200AA1C89 /* BackgroundColorProvider.swift */,
 				625561E11F58539500AA1C89 /* FactProvider.swift */,
 				625561B51F57515200AA1C89 /* ViewController.swift */,
 				625561B71F57515200AA1C89 /* Main.storyboard */,
 				625561BA1F57515200AA1C89 /* Assets.xcassets */,
 				625561BC1F57515200AA1C89 /* LaunchScreen.storyboard */,
 				625561BF1F57515200AA1C89 /* Info.plist */,
-				625561E31F58865200AA1C89 /* BackgroundColorProvider.swift */,
 				625561E51F5894C400AA1C89 /* README.rtf */,
 			);
 			path = Factoids;

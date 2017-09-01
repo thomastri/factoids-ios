@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var factoidNumber: UILabel!
     @IBOutlet weak var factoidScore: UILabel!
     @IBOutlet weak var factoidFakeButton: UIButton!
+    @IBOutlet weak var highScore: UILabel!
     
     var factProvider = FactProvider()
     let colorProvider = BackgroundColorProvider()
@@ -46,15 +47,23 @@ class ViewController: UIViewController {
         view.backgroundColor = randomColor
         factoidButton.tintColor = randomColor
     }
-
-    // Every time button is pressed, this method is called
-    @IBAction func showFact() {
-        
+    
+    func newFact() {
         factOrFake = factProvider.getFactOrFake() // 0 or 1 for random fact
         factoidLabel.text = factProvider.randomFact() // re-rolls factOrFake, presents a fact
         
-        factoidNumber.text = "Factoid # \(factProvider.getFactNum()):"
+        factoidNumber.text = "Factoid #\(factProvider.getFactNum()):"
+    }
+    
+    func updateScores() {
+        factoidScore.text = "Score: \(factProvider.getScore())"
+        highScore.text = "High Score: \(factProvider.updateAndGetHighScore())"
+    }
+
+    // Every time FactButton is pressed, this method is called
+    @IBAction func showFact() {
         
+        newFact()
         
         if (factOrFake == 0) {
             factProvider.increaseScore()
@@ -62,17 +71,13 @@ class ViewController: UIViewController {
             factProvider.resetScore()
         }
 
-        factoidScore.text = "Score: \(factProvider.getScore())"
-
+        updateScores()
         changeBGColor()
     }
     
     @IBAction func fakeFactPress() {
         
-        factOrFake = factProvider.getFactOrFake()
-        factoidLabel.text = factProvider.randomFact()
-        
-        factoidNumber.text = "Factoid # \(factProvider.getFactNum()):"
+        newFact()
         
         if (factOrFake == 1) {
             factProvider.increaseScore()
@@ -80,8 +85,7 @@ class ViewController: UIViewController {
             factProvider.resetScore()
         }
         
-        factoidScore.text = "Score: \(factProvider.getScore())"
-        
+        updateScores()
         changeBGColor()
     }
 }

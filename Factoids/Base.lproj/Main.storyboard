@@ -47,9 +47,8 @@
                                 <color key="textColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgX-8a-Qg8">
-                                <rect key="frame" x="277" y="62" width="84" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OgX-8a-Qg8">
+                                <rect key="frame" x="277" y="62" width="64" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="0.74884463028169013" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -61,25 +60,38 @@
                                     <constraint firstAttribute="height" constant="40" id="Ftm-uS-ISD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="tintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.88076829663212441" green="0.43001182515493547" blue="0.35277613747379721" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Fake!"/>
                                 <connections>
                                     <action selector="fakeFactPress" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y6g-Hk-sEc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4kq-oe-f4D">
+                                <rect key="frame" x="237" y="86" width="122" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="122" id="bIi-jw-4Nk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.96665434171128428" green="1" blue="0.98358462453329987" alpha="0.81200484154929575" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.3529411764705882" green="0.73333333333333328" blue="0.70980392156862748" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="4kq-oe-f4D" firstAttribute="top" secondItem="OgX-8a-Qg8" secondAttribute="bottom" constant="3" id="NR6-m6-ff9"/>
                             <constraint firstItem="1oN-AB-ydw" firstAttribute="leading" secondItem="MmP-mj-B6T" secondAttribute="trailing" constant="57" id="Whj-aa-Eno"/>
                             <constraint firstAttribute="trailingMargin" secondItem="w9A-ma-8LO" secondAttribute="trailing" constant="20" id="X3n-Cc-sUA"/>
                             <constraint firstItem="MmP-mj-B6T" firstAttribute="leading" secondItem="w9A-ma-8LO" secondAttribute="leading" id="dl2-3P-bJv"/>
                             <constraint firstItem="w9A-ma-8LO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="doG-y8-cGO"/>
+                            <constraint firstItem="4kq-oe-f4D" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="86" id="iWF-u3-YrJ"/>
                             <constraint firstItem="1oN-AB-ydw" firstAttribute="baseline" secondItem="MmP-mj-B6T" secondAttribute="baseline" id="jtr-ep-3rm"/>
                             <constraint firstItem="w9A-ma-8LO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="pGt-qX-aNI"/>
                             <constraint firstItem="MmP-mj-B6T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-90" id="phg-gs-aLH"/>
                             <constraint firstItem="1oN-AB-ydw" firstAttribute="trailing" secondItem="w9A-ma-8LO" secondAttribute="trailing" id="rWZ-uK-ZcE"/>
                             <constraint firstItem="oSD-mq-F8d" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="140" id="rt6-Zg-BKp"/>
+                            <constraint firstItem="4kq-oe-f4D" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="sdS-W5-NDB"/>
                             <constraint firstItem="oSD-mq-F8d" firstAttribute="leading" secondItem="w9A-ma-8LO" secondAttribute="leading" id="wDp-1J-IJd"/>
+                            <constraint firstItem="OgX-8a-Qg8" firstAttribute="leading" secondItem="4kq-oe-f4D" secondAttribute="trailing" constant="-82" id="we1-zb-Ocz"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MmP-mj-B6T" secondAttribute="bottom" constant="80" id="zS4-eD-nK2"/>
                         </constraints>
                     </view>
@@ -89,6 +101,7 @@
                         <outlet property="factoidLabel" destination="w9A-ma-8LO" id="Gmz-pb-On0"/>
                         <outlet property="factoidNumber" destination="oSD-mq-F8d" id="awP-wb-bqZ"/>
                         <outlet property="factoidScore" destination="OgX-8a-Qg8" id="x9H-F6-psW"/>
+                        <outlet property="highScore" destination="4kq-oe-f4D" id="HVt-4f-dlL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

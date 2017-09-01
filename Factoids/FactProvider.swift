@@ -13,6 +13,7 @@ struct FactProvider {
     var randomNumber = 0
     var factOrFake = 0
     var score = 0
+    var highScore = 0
     
     let facts = [
         "Ants stretch when they wake up in the morning.",
@@ -201,6 +202,17 @@ struct FactProvider {
         
         // factOrFake == 0
         return randomReal()
+    }
+    
+    mutating func updateAndGetHighScore() -> Int {
+        updateHighScore()
+        return highScore
+    }
+    
+    mutating func updateHighScore() -> Void {
+        if (score >= highScore) {
+            highScore = score
+        }
     }
     
     func getFactNum() -> Int {
