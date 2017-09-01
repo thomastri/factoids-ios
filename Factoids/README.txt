@@ -1,0 +1,35 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 08.31.17\
+\
+Factoids: currently displays a random fact from a hardcoded array of ~75 different facts.\
+\
+Future plans: Gamify!\
+\
+1. Add a new array of fake facts\
+2. Instead of "New Fact" button, have two buttons that choose either "Fact" or "Fake"\
+3. If user is correct, +1 to score. Else, reset to 0 (i don't play around)\
+4. Video ads after every game (or maybe banner ads?)\
+	4.1. In app purchase one time $1.99 to get rid of ads\
+5. Connect with FaceBook : add leadership boards, challenge friends, daily, weekly, monthly top challengers\
+6. Go from hard coded fact arrays to database\
+\
+\
+UPDATED: 09.01\
+1. CoreData support:\
+	- move all facts / fakeFacts to their own tables\
+	- keep track of high scores in DB\
+\
+2. connect with facebook, challenge friends\
+\
+3. banner ads\
+	- video ads to continue streak? only one continue per session\
+\
+4. add "ding" when correct, "X" noise when incorrect\
+	- add shaking animation to score when incorrect\
+	- add shaking animation to high score when updating}
