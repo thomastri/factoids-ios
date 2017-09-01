@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     
     var factProvider = FactProvider()
     let colorProvider = BackgroundColorProvider()
+    var factOrFake = 2
     
     override func viewDidLoad() {
         super.viewDidLoad() // any code they write gets run before our code
@@ -39,43 +40,49 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func changeBGColor() {
+        let randomColor = colorProvider.randomColors()
+        view.backgroundColor = randomColor
+        factoidButton.tintColor = randomColor
+    }
 
     // Every time button is pressed, this method is called
     @IBAction func showFact() {
         
-        factoidLabel.text = factProvider.randomFact()
+        factOrFake = factProvider.getFactOrFake() // 0 or 1 for random fact
+        factoidLabel.text = factProvider.randomFact() // re-rolls factOrFake, presents a fact
         
-        let randomColor = colorProvider.randomColors()
-        view.backgroundColor = randomColor
-        factoidButton.tintColor = randomColor
         factoidNumber.text = "Factoid # \(factProvider.getFactNum()):"
         
-        let factOrFake = factProvider.getFactOrFake()
-        factoidScore.text = "Score: \(factProvider.getScore())"
         
-        if (factOrFake == 0 || factOrFake == 2) {
+        if (factOrFake == 0) {
             factProvider.increaseScore()
         } else {
             factProvider.resetScore()
         }
+
+        factoidScore.text = "Score: \(factProvider.getScore())"
+
+        changeBGColor()
     }
     
     @IBAction func fakeFactPress() {
+        
+        factOrFake = factProvider.getFactOrFake()
         factoidLabel.text = factProvider.randomFact()
         
-        let randomColor = colorProvider.randomColors()
-        view.backgroundColor = randomColor
-        factoidButton.tintColor = randomColor
         factoidNumber.text = "Factoid # \(factProvider.getFactNum()):"
-        
-        let factOrFake = factProvider.getFactOrFake()
-        factoidScore.text = "Score: \(factProvider.getScore())"
         
         if (factOrFake == 1) {
             factProvider.increaseScore()
         } else {
             factProvider.resetScore()
         }
+        
+        factoidScore.text = "Score: \(factProvider.getScore())"
+        
+        changeBGColor()
     }
 }
 

@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import GameKit
 @testable import Factoids
 
 class FactoidsTests: XCTestCase {
@@ -24,10 +25,35 @@ class FactoidsTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+//        let count = 50
+//        var index = 0
+//        var factProvider = FactProvider()
+//        var fact = "text"
+//        while index < count {
+//            
+//            fact = factProvider.randomFact()
+//            print("\(FactProvider().getFactOrFake()) :  \(fact)")
+//            index += 1
+//            
+//        }
+        
         let count = 50
         var index = 0
         while index < count {
-            print(FactProvider().getFactOrFake())
+            
+            print(GKRandomSource.sharedRandom().nextInt(upperBound: 2))
+            index += 1
+            
+        }
+    }
+    
+    func testRandomNum() {
+        
+        let count = 50
+        var index = 0
+        while index < count {
+            
+            print(GKRandomSource.sharedRandom().nextInt(upperBound: 2))
             index += 1
             
         }
