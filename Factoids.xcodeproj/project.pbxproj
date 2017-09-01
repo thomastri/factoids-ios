@@ -426,6 +426,7 @@
 		625561D91F57515200AA1C89 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D257YZMABH;
 				INFOPLIST_FILE = Factoids/Info.plist;
@@ -439,6 +440,7 @@
 		625561DA1F57515200AA1C89 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = D257YZMABH;
 				INFOPLIST_FILE = Factoids/Info.plist;
