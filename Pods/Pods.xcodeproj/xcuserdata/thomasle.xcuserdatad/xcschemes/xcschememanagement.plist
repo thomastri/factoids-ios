@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Factoids.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FactoidsTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-FactoidsUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>1CF0EB740AF24B402DB875286CFE3DB6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>44D60587063F93C542EE4D2D709E524F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A267660E1AD4832DE75665F2F87AEA3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE3532968D2C378633A877D4BE186385</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

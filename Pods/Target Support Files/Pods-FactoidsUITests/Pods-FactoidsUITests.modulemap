@@ -1,0 +1,6 @@
+framework module Pods_FactoidsUITests {
+  umbrella header "Pods-FactoidsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

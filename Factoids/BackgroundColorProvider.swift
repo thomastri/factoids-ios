@@ -7,6 +7,7 @@
 //
 
 import GameKit
+import ChameleonFramework
 
 struct BackgroundColorProvider {
     let colors = [
