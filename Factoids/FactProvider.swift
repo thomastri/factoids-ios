@@ -13,7 +13,14 @@ struct FactProvider {
     var randomNumber = 0
     var factOrFake = 0
     var score = 0
-    var highScore = 0
+    var highScore: Int {
+        get {
+            return UserDefaults.standard.integer(forKey: "highScore")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "highScore")
+        }
+    }
     
     let facts = [
         "Ants stretch when they wake up in the morning.",
@@ -85,7 +92,42 @@ struct FactProvider {
         "Crows can caw in different dialects depending on where they are from.",
         "Bamboo can grow up to three feet in one day",
         "Eating 1,400 Slim Jims in one sitting will kill the average human.",
-        "Maine is the closest state to Africa."
+        "Maine is the closest state to Africa.",
+        "The male seahorse gets pregnant instead of the female seahorse.",
+        "Society did not start eating apples regularly until around 1910.",
+        "The practice of circumcision for non-religious purposes became popular to deter men from masturbating.",
+        "Cereal was originally invented as a religious morning snack.",
+        "JK Rowling was a single mother on welfare when she wrote the first Harry Potter novel.",
+        "Rapper Eminem's favorite food is a beaf and bean burrito.",
+        "Napoleon Bonaparte was 5 feet and 6 inches tall.",
+        "Shrek was the first movie to win an Oscar for Best Animated Movie.",
+        "Bananas don't grow on tress, but giant plants that look like trees.",
+        "A goldfish has an average memory of about 3 months.",
+        "Bulls are color-blind",
+        "S.O.S. doesn't actually stand for anything, it became a popular Morse code distress signal simply because it was easy to transmit.",
+        "Due to the blood flow, the nails on your dominant hand grow faster than your non-dominant hand.",
+        "High fives weren't invited until 1977.",
+        "Instead of removing your original kidney during a transplant, doctors will place your new kidney in the pelvis.",
+        "Nintendo was founded in the 1800s.",
+        "It rains diamonds on Saturn and Jupiter.",
+        "Wyoming only has two escalators.",
+        "Fishing is the sport that causes the most American deaths per year.",
+        "Mosquitos kill an average of 750,000 people per year.",
+        "One 18-inch pizza is more pizza than two 12-inch pizzas.",
+        "The difference in time between when the tyrannosaurus rex and the stegosaurus lived is greater than the difference in time between the T. rex and us.",
+        "Bananas, pumpkins, and watermelons are classified as berries.",
+        "There are more public libraries in the United States than there are McDonalds.",
+        "You can orgasm after death.",
+        "Cans were invented about 50 years before the can-opener.",
+        "There are more trees on earth than there are stars in the galaxy.",
+        "There are more tigers in private collections in Texas than there are left in the wild.",
+        "Elephants can produce rumbles through the ground to communicate with each other.",
+        "Donald Trump was elected president of the United States.",
+        "There is a species of shark that has a lifespan of ~400 years.",
+        "If a baby is born under water, it can live its entire life under water.",
+        "The United States created incendiary bombs to be dropped by bats during World War II.",
+        "Corn flakes were invented to prevent people from masturbating.",
+        "If you are arrested for public urination in California you must register as a sex offender."
     ]
     
     let fakes = [
@@ -177,7 +219,36 @@ struct FactProvider {
         "Embassies are soil of their home country and the receiving country has no jurisdiction whatsoever there.",
         "If you swallow watermelon seeds you'll grow a watermelon in your belly.",
         "Spaghetti grows on trees.",
-        "Fish would get scared and swim away if you talked while fishing."
+        "Fish would get scared and swim away if you talked while fishing.",
+        "Cars are illegal in Vietnam.",
+        "Abraham Lincoln was considered America's first rapper.",
+        "Balogna was originally created with non-meat products, hence the phrase 'That is a load of balogna'.",
+        "The Shazam app was originally created for eavesdropping purposes.",
+        "Eating chocolate will help you lose weight.",
+        "Rapper Eminem got his name when his best friend, Proof, died by choking on an m&m.",
+        "The Great Wall of China is the only man made structure that can be seen from space.",
+        "The rotation of a toilet flush will differ depending on the hemisphere you are in.",
+        "Einstein failed his math class.",
+        "Humans existed the same time dinosaurs did.",
+        "If you touch a baby bird, its mother will reject it due to the smell of humans.",
+        "Police require a 24-hour waiting period before accepting a missing persons report.",
+        "Bats are blind.",
+        "A goldfish has an average memory of about 3 months.",
+        "Your hair and nails will continue to grow after you die.",
+        "The national seal for the United States was originally a Turkey.",
+        "A strawberry is not a berry.",
+        "Americans eat more calories on Super Bowl Sunday than the rest of the world combined.",
+        "Coconuts are technically considered mammals because they have hair and produce milk.",
+        "Human males can only release two sperm during their lifetime: one for each testicle.",
+        "One in ten men have a third nipple.",
+        "During his time in the Navy, Barack Obama proteced his ship and crew from a pirate attack. After this attack, he left the Navy to pursue a life in politics.",
+        "If you microwave a peanut for the right amount of time, it can turn into popcorn.",
+        "Buzz Aldrin was the first man to legally have sex in space.",
+        "There is a fruit found in Hawaii that has been known to let the consumer stretch their limbs an extra three to six inches.",
+        "There is a natural phenomenon where explorers who visit the North and South pole within the span of one week are known to develop bipolar disorder.",
+        "Rupert Grint, who played Ron Weasley in the Harry Potter films, got his role when JK Rowling accidentally pushed him off a cruise ship.",
+        "Lobsters are immortal until a predator kills them."
+        
     ]
     
     mutating func randomFake() -> String {

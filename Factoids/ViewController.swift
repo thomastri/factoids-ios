@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 class ViewController: UIViewController {
 
@@ -35,6 +36,7 @@ class ViewController: UIViewController {
         super.viewDidLoad() // any code they write gets run before our code
         
         factoidLabel.text = factProvider.randomFact()
+        highScore.text = "High Score: \(factProvider.updateAndGetHighScore())"
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,19 +52,25 @@ class ViewController: UIViewController {
     
     func newFact() {
         factOrFake = factProvider.getFactOrFake() // 0 or 1 for random fact
+        factoidLabel.textColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true)
         factoidLabel.text = factProvider.randomFact() // re-rolls factOrFake, presents a fact
         
         factoidNumber.text = "Factoid #\(factProvider.getFactNum()):"
+        factoidNumber.textColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true, alpha: 0.5)
     }
     
     func updateScores() {
         factoidScore.text = "Score: \(factProvider.getScore())"
         highScore.text = "High Score: \(factProvider.updateAndGetHighScore())"
+        
+        factoidScore.textColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true, alpha: 0.75)
+        highScore.textColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true, alpha: 0.85)
     }
 
     // Every time FactButton is pressed, this method is called
     @IBAction func showFact() {
         
+        changeBGColor()
         newFact()
         
         if (factOrFake == 0) {
@@ -72,11 +80,12 @@ class ViewController: UIViewController {
         }
 
         updateScores()
-        changeBGColor()
+        
     }
     
     @IBAction func fakeFactPress() {
         
+        changeBGColor()
         newFact()
         
         if (factOrFake == 1) {
@@ -86,7 +95,6 @@ class ViewController: UIViewController {
         }
         
         updateScores()
-        changeBGColor()
     }
 }
 

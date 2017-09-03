@@ -32,13 +32,55 @@ struct BackgroundColorProvider {
         UIColor(red: 96/255, green: 193/255, blue: 190/255, alpha: 1.0),
         UIColor(red: 219/255, green: 219/255, blue: 109/255, alpha: 1.0),
         UIColor(red: 173/255, green: 137/255, blue: 86/255, alpha: 1.0),
-        UIColor(red: 204/255, green: 229/255, blue: 114/255, alpha: 1.0)
-        
+        UIColor(red: 204/255, green: 229/255, blue: 114/255, alpha: 1.0),
+        UIColor.flatRed(),
+        UIColor.flatBlue(),
+        UIColor.flatOrange(),
+        UIColor.flatYellow(),
+        UIColor.flatNavyBlue(),
+        UIColor.flatMagenta(),
+        UIColor.flatTeal(),
+        UIColor.flatSkyBlue(),
+        UIColor.flatGreen(),
+        UIColor.flatMint(),
+        UIColor.flatWhite(),
+        UIColor.flatGray(),
+        UIColor.flatForestGreen(),
+        UIColor.flatPurple(),
+        UIColor.flatBrown(),
+        UIColor.flatPlum(),
+        UIColor.flatWatermelon(),
+        UIColor.flatLime(),
+        UIColor.flatPink(),
+        UIColor.flatMaroon(),
+        UIColor.flatCoffee(),
+        UIColor.flatPowderBlue(),
+        UIColor.flatRedColorDark(),
+        UIColor.flatBlueColorDark(),
+        UIColor.flatOrangeColorDark(),
+        UIColor.flatYellowColorDark(),
+        UIColor.flatNavyBlueColorDark(),
+        UIColor.flatMagentaColorDark(),
+        UIColor.flatTealColorDark(),
+        UIColor.flatSkyBlueColorDark(),
+        UIColor.flatGreenColorDark(),
+        UIColor.flatMintColorDark(),
+        UIColor.flatWhiteColorDark(),
+        UIColor.flatGrayColorDark(),
+        UIColor.flatForestGreenColorDark(),
+        UIColor.flatPurpleColorDark(),
+        UIColor.flatBrownColorDark(),
+        UIColor.flatPlumColorDark(),
+        UIColor.flatWatermelonColorDark(),
+        UIColor.flatLimeColorDark(),
+        UIColor.flatPinkColorDark(),
+        UIColor.flatMaroonColorDark(),
+        UIColor.flatCoffeeColorDark(),
+        UIColor.flatPowderBlueColorDark()
     ]
-    
     
     func randomColors() -> UIColor {
         let randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: colors.count)
-        return colors[randomNumber]
+        return colors[randomNumber]!
     }
 }
