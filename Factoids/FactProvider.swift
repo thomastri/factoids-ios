@@ -158,7 +158,7 @@ struct FactProvider {
         "There is no McDonalds in Antartica.",
         "Snails can have up to 14,000 teeth.",
         "Froot Loops are all the same flavor.",
-        "The human nose has a memory of about 50,000 different smells.",
+        "The human nose can recognize about 50,000 different smells.",
         "The last known dire wolf lived over 9000 years ago."
     ]
     
