@@ -159,7 +159,11 @@ struct FactProvider {
         "Snails can have up to 14,000 teeth.",
         "Froot Loops are all the same flavor.",
         "The human nose can recognize about 50,000 different smells.",
-        "The last known dire wolf lived over 9000 years ago."
+        "The last known dire wolf lived over 9000 years ago.",
+        "Abraham Lincoln once pardoned someone after they were convicted of beastiality.",
+        "Venus is hotter than Mercury, despite being further from the sun.",
+        "Most cowboys in the Wild West were Mexican and African American.",
+        "Movie theaters were some of the first public buildings to have air conditioning."
     ]
     
     let fakes = [
@@ -282,7 +286,7 @@ struct FactProvider {
         "Male penguins search the entire beach for a pebble to propose to the penguin of their dreams.",
         "The Twitter bird's name is Jerry.",
         "In India, building a snowman is punishable by death.",
-        "One in ten women admit to eating their own poop at least once.",
+        "One in ten women admit to eating their own children at least once.",
         "In Jamaica, squirrels were often kept to teach kids how to climb trees.",
         "In certain cultures, a middle finger means 'peace among worlds'.",
         "Nikes were originally worn by Greek Gods.",
