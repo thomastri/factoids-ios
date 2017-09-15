@@ -7,6 +7,8 @@
 //
 
 import GameKit
+import SwiftySound
+import AVFoundation
 
 struct FactProvider {
     
@@ -163,7 +165,10 @@ struct FactProvider {
         "Abraham Lincoln once pardoned someone after they were convicted of beastiality.",
         "Venus is hotter than Mercury, despite being further from the sun.",
         "Most cowboys in the Wild West were Mexican and African American.",
-        "Movie theaters were some of the first public buildings to have air conditioning."
+        "Movie theaters were some of the first public buildings to have air conditioning.",
+        "In its early days, Hotmail had a security flaw that allowed users to log into any account using the password 'eh'.",
+        "Rapper Soulja Boy did Crank Dat at the ripe age of 16.",
+        "If you invested $1000 into BitCoin in April 2010, you would have over $1 billion in September 2017."
     ]
     
     let fakes = [
@@ -280,7 +285,7 @@ struct FactProvider {
         "If you microwave a peanut for the right amount of time, it can turn into popcorn.",
         "Buzz Aldrin was the first man to legally have sex in space.",
         "There is a fruit found in Hawaii that has been known to let the consumer stretch their limbs an extra three to six inches.",
-        "There is a natural phenomenon where explorers who visit the North and South pole within the span of one week are known to develop bipolar disorder.",
+        "There is a natural phenomenon where explorers who visit the North and South pole within the span of one week develop bipolar disorder.",
         "Rupert Grint, who played Ron Weasley in the Harry Potter films, got his role when JK Rowling accidentally pushed him off a cruise ship.",
         "Lobsters are immortal until a predator kills them.",
         "Male penguins search the entire beach for a pebble to propose to the penguin of their dreams.",
@@ -295,11 +300,17 @@ struct FactProvider {
         "Neptune was first discovered by a nine year old boy in England named Thomas Lee.",
         "Snapchat was built by a 14 year old developer.",
         "The first living thing sent into space from Earth was a squirrel, Randolph, from Russia in 1952.",
-        "Bill Gates and Steve Wozniak attended the same high school at the same time.",
+        "Bill Gates and Steve Wozniak attended the same high school.",
         "Narwhals are mythical creatures.",
         "In the 1800s many Irish-Americans were mistaken as Elves.",
         "Kanye West's favorite show is Spongebob Squarepants.",
         "Brad Pitt killed Adolf Hitler in 1945, ending World War II.",
+        "Actor Shia Labeouf is the last known cannibal.",
+        "Ghengis Khan developed his own fast food chain that is still operating today.",
+        "American 'football' was first created when a soccer ball was flattened in 1908 right before a tournament and they played with the ball anyways. This is why it's called 'football' in the United States.",
+        "If you go into space without a space suit, your body will physically implode.",
+        "Pluto, being a gaseous planet, has the same properties found in an ordinary plum. In other words, Pluto likely smells like a plum.",
+        "The average software developer can bench press 300 pounds."
     ]
     
     mutating func randomFake() -> String {
@@ -345,12 +356,36 @@ struct FactProvider {
         return factOrFake
     }
     
+    func correctSound () -> Void {
+        var correctSoundEffect: AVAudioPlayer!
+        
+        let path = Bundle.main.path(forResource: "right", ofType:"wav")!
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            let sound = try AVAudioPlayer(contentsOf: url)
+            correctSoundEffect = sound
+            sound.play()
+            correctSoundEffect.play()
+            print("loaded file")
+        } catch {
+            // couldn't load file :(
+            print("couldn't load correct sound")
+        }
+    }
+    
+    func incorrectSound() -> Void {
+        
+    }
+    
     mutating func resetScore() -> Void {
         score = 0
+        correctSound()
     }
     
     mutating func increaseScore() -> Void {
         score += 1
+        correctSound()
     }
     
     func getScore() -> Int {

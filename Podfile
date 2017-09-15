@@ -8,6 +8,7 @@ target 'Factoids' do
 
   # Pods for Factoids
     pod 'ChameleonFramework'
+    pod 'SwiftySound'
 
   target 'FactoidsTests' do
     inherit! :search_paths

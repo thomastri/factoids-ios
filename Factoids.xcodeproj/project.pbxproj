@@ -46,6 +46,10 @@
 		3A012F54843ED37D86EC9289 /* Pods-FactoidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FactoidsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FactoidsTests/Pods-FactoidsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		47C6845A58A8D5042EFACDEE /* Pods_FactoidsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FactoidsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AC069A6BF992807D5AD1993 /* Pods_FactoidsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FactoidsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62262C0C1F6C3EFC0059E3C7 /* right.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = right.wav; sourceTree = "<group>"; };
+		62262C0D1F6C3EFD0059E3C7 /* wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrong.wav; sourceTree = "<group>"; };
+		62262C0E1F6C444D0059E3C7 /* right.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = right.wav; sourceTree = "<group>"; };
+		62262C0F1F6C444D0059E3C7 /* wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrong.wav; sourceTree = "<group>"; };
 		625561B01F57515200AA1C89 /* Factoids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Factoids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		625561B31F57515200AA1C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		625561B51F57515200AA1C89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +99,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62262C0B1F6C3EE80059E3C7 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				62262C0C1F6C3EFC0059E3C7 /* right.wav */,
+				62262C0D1F6C3EFD0059E3C7 /* wrong.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		625561A71F57515200AA1C89 = {
 			isa = PBXGroup;
 			children = (
@@ -120,11 +133,14 @@
 		625561B21F57515200AA1C89 /* Factoids */ = {
 			isa = PBXGroup;
 			children = (
+				62262C0B1F6C3EE80059E3C7 /* Sounds */,
 				625561B31F57515200AA1C89 /* AppDelegate.swift */,
 				625561E31F58865200AA1C89 /* BackgroundColorProvider.swift */,
 				625561E11F58539500AA1C89 /* FactProvider.swift */,
 				625561B51F57515200AA1C89 /* ViewController.swift */,
 				625561B71F57515200AA1C89 /* Main.storyboard */,
+				62262C0E1F6C444D0059E3C7 /* right.wav */,
+				62262C0F1F6C444D0059E3C7 /* wrong.wav */,
 				625561BA1F57515200AA1C89 /* Assets.xcassets */,
 				625561BC1F57515200AA1C89 /* LaunchScreen.storyboard */,
 				625561BF1F57515200AA1C89 /* Info.plist */,
@@ -385,10 +401,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Factoids/Pods-Factoids-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftySound/SwiftySound.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftySound.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -733,6 +751,7 @@
 				625561DA1F57515200AA1C89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		625561DB1F57515200AA1C89 /* Build configuration list for PBXNativeTarget "FactoidsTests" */ = {
 			isa = XCConfigurationList;
@@ -741,6 +760,7 @@
 				625561DD1F57515200AA1C89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		625561DE1F57515200AA1C89 /* Build configuration list for PBXNativeTarget "FactoidsUITests" */ = {
 			isa = XCConfigurationList;
@@ -749,6 +769,7 @@
 				625561E01F57515200AA1C89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

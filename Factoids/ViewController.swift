@@ -75,6 +75,7 @@ class ViewController: UIViewController {
         
         if (factOrFake == 0) {
             factProvider.increaseScore()
+            
         } else {
             factProvider.resetScore()
         }
