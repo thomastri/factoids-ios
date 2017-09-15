@@ -8,8 +8,6 @@
 
 import GameKit
 import SwiftySound
-import AudioToolbox
-import AVFoundation
 
 struct FactProvider {
     
@@ -142,7 +140,7 @@ struct FactProvider {
         "Billy goats urinate on their own heads to smell more attractive to females.",
         "During your lifetime, you'll salivate enough to fill two swimming pools",
         "The person who invented the frisbee was cremated and made into a frisbee.",
-        "Movie trailers were originally show AFTER the movie, which is why they are called 'trailers'",
+        "Movie trailers were originally shown AFTER the movie, which is why they are called 'trailers'.",
         "Heart attacks are more likely to happen on a Monday.",
         "In 2015, more people were killed trying to take a selfie than people in shark attacks.",
         "You cannot snore and dream at the same time.",
@@ -169,7 +167,8 @@ struct FactProvider {
         "Movie theaters were some of the first public buildings to have air conditioning.",
         "In its early days, Hotmail had a security flaw that allowed users to log into any account using the password 'eh'.",
         "Rapper Soulja Boy did Crank Dat at the ripe age of 16.",
-        "If you invested $1000 into BitCoin in April 2010, you would have over $1 billion in September 2017."
+        "If you invested $1000 into BitCoin in April 2010, you would have over $1 billion in September 2017.",
+        "There are more people on FaceBook today than on Earth 200 years ago."
     ]
     
     let fakes = [
@@ -314,14 +313,29 @@ struct FactProvider {
         "The average software developer can bench press 300 pounds."
     ]
     
+    var fakeTracker = [Int]()
+    var factTracker = [Int]()
+    
     mutating func randomFake() -> String {
-        randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: fakes.count)
+        
+        // avoids duplicates each session
+        repeat {
+            randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: fakes.count)
+        } while(fakeTracker.contains(randomNumber))
+        
+        fakeTracker.append(randomNumber)
         
         return fakes[randomNumber]
     }
     
     mutating func randomReal() -> String {
-        randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: facts.count)
+        
+        // avoids duplicates each session
+        repeat {
+            randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: facts.count)
+        } while(factTracker.contains(randomNumber))
+        
+        factTracker.append(randomNumber)
         
         return facts[randomNumber]
     }
@@ -368,6 +382,10 @@ struct FactProvider {
     mutating func resetScore() -> Void {
         score = 0
         incorrectSound()
+        
+        // resets duplicate checker after game over
+        factTracker.removeAll()
+        fakeTracker.removeAll()
     }
     
     mutating func increaseScore() -> Void {
