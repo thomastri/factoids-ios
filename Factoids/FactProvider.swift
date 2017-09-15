@@ -8,6 +8,7 @@
 
 import GameKit
 import SwiftySound
+import AudioToolbox
 import AVFoundation
 
 struct FactProvider {
@@ -355,32 +356,18 @@ struct FactProvider {
     func getFactOrFake() -> Int {
         return factOrFake
     }
-    
+
     func correctSound () -> Void {
-        var correctSoundEffect: AVAudioPlayer!
-        
-        let path = Bundle.main.path(forResource: "right", ofType:"wav")!
-        let url = URL(fileURLWithPath: path)
-        
-        do {
-            let sound = try AVAudioPlayer(contentsOf: url)
-            correctSoundEffect = sound
-            sound.play()
-            correctSoundEffect.play()
-            print("loaded file")
-        } catch {
-            // couldn't load file :(
-            print("couldn't load correct sound")
-        }
+        Sound.play(file: "right.wav")
     }
     
     func incorrectSound() -> Void {
-        
+        Sound.play(file: "wrong.wav")
     }
     
     mutating func resetScore() -> Void {
         score = 0
-        correctSound()
+        incorrectSound()
     }
     
     mutating func increaseScore() -> Void {

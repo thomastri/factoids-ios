@@ -8,6 +8,7 @@
 
 import UIKit
 import ChameleonFramework
+import SwiftySound
 
 class ViewController: UIViewController {
 
@@ -34,6 +35,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad() // any code they write gets run before our code
+        let _ = Sound.enabled
         
         factoidLabel.text = factProvider.randomFact()
         highScore.text = "High Score: \(factProvider.updateAndGetHighScore())"
