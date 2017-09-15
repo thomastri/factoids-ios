@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		2D7034627904D55BCC56D239 /* Pods_FactoidsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47C6845A58A8D5042EFACDEE /* Pods_FactoidsUITests.framework */; };
 		5F44BF0ECDE5AB80F30EE5F4 /* Pods_FactoidsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AC069A6BF992807D5AD1993 /* Pods_FactoidsTests.framework */; };
-		62262C121F6C67960059E3C7 /* right.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62262C101F6C62250059E3C7 /* right.wav */; };
-		62262C131F6C67960059E3C7 /* wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62262C111F6C62250059E3C7 /* wrong.wav */; };
+		62262C171F6C68BA0059E3C7 /* right.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62262C161F6C685B0059E3C7 /* right.wav */; };
+		62262C181F6C68BA0059E3C7 /* wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 62262C151F6C685B0059E3C7 /* wrong.wav */; };
 		625561B41F57515200AA1C89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625561B31F57515200AA1C89 /* AppDelegate.swift */; };
 		625561B61F57515200AA1C89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 625561B51F57515200AA1C89 /* ViewController.swift */; };
 		625561B91F57515200AA1C89 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 625561B71F57515200AA1C89 /* Main.storyboard */; };
@@ -48,8 +48,8 @@
 		3A012F54843ED37D86EC9289 /* Pods-FactoidsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FactoidsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FactoidsTests/Pods-FactoidsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		47C6845A58A8D5042EFACDEE /* Pods_FactoidsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FactoidsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AC069A6BF992807D5AD1993 /* Pods_FactoidsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FactoidsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		62262C101F6C62250059E3C7 /* right.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = right.wav; path = ../../../../../Downloads/right.wav; sourceTree = "<group>"; };
-		62262C111F6C62250059E3C7 /* wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = wrong.wav; path = ../../../../../Downloads/wrong.wav; sourceTree = "<group>"; };
+		62262C151F6C685B0059E3C7 /* wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = wrong.wav; path = ../../../../../../Downloads/wrong.wav; sourceTree = "<group>"; };
+		62262C161F6C685B0059E3C7 /* right.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = right.wav; path = ../../../../../../Downloads/right.wav; sourceTree = "<group>"; };
 		625561B01F57515200AA1C89 /* Factoids.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Factoids.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		625561B31F57515200AA1C89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		625561B51F57515200AA1C89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +99,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62262C141F6C684E0059E3C7 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				62262C161F6C685B0059E3C7 /* right.wav */,
+				62262C151F6C685B0059E3C7 /* wrong.wav */,
+			);
+			name = sounds;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		625561A71F57515200AA1C89 = {
 			isa = PBXGroup;
 			children = (
@@ -124,13 +134,12 @@
 		625561B21F57515200AA1C89 /* Factoids */ = {
 			isa = PBXGroup;
 			children = (
+				62262C141F6C684E0059E3C7 /* sounds */,
 				625561B31F57515200AA1C89 /* AppDelegate.swift */,
 				625561E31F58865200AA1C89 /* BackgroundColorProvider.swift */,
 				625561E11F58539500AA1C89 /* FactProvider.swift */,
 				625561B51F57515200AA1C89 /* ViewController.swift */,
 				625561B71F57515200AA1C89 /* Main.storyboard */,
-				62262C101F6C62250059E3C7 /* right.wav */,
-				62262C111F6C62250059E3C7 /* wrong.wav */,
 				625561BA1F57515200AA1C89 /* Assets.xcassets */,
 				625561BC1F57515200AA1C89 /* LaunchScreen.storyboard */,
 				625561BF1F57515200AA1C89 /* Info.plist */,
@@ -299,8 +308,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				62262C121F6C67960059E3C7 /* right.wav in Resources */,
-				62262C131F6C67960059E3C7 /* wrong.wav in Resources */,
+				62262C171F6C68BA0059E3C7 /* right.wav in Resources */,
+				62262C181F6C68BA0059E3C7 /* wrong.wav in Resources */,
 				625561BE1F57515200AA1C89 /* LaunchScreen.storyboard in Resources */,
 				625561BB1F57515200AA1C89 /* Assets.xcassets in Resources */,
 				625561E61F5894C400AA1C89 /* README.rtf in Resources */,

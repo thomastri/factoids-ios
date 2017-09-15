@@ -77,7 +77,6 @@ class ViewController: UIViewController {
         
         if (factOrFake == 0) {
             factProvider.increaseScore()
-            
         } else {
             factProvider.resetScore()
         }
@@ -99,5 +98,8 @@ class ViewController: UIViewController {
         
         updateScores()
     }
+    
+    // TODO: refactor methods from FactProvider over to ViewController in order to
+    // animate and color scores on every wrong answer and high score updates
 }
 
