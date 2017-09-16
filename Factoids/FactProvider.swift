@@ -310,7 +310,9 @@ struct FactProvider {
         "American 'football' was first created when a soccer ball was flattened in 1908 right before a tournament and they played with the ball anyways. This is why it's called 'football' in the United States.",
         "If you go into space without a space suit, your body will physically implode.",
         "Pluto, being a gaseous planet, has the same properties found in an ordinary plum. In other words, Pluto likely smells like a plum.",
-        "The average software developer can bench press 300 pounds."
+        "The average software developer can bench press 300 pounds.",
+        "Sharks kill more humans per year than any other wild animal.",
+        "Due to lack of dynamite, part of Mount Rushmore was created using cannonballs."
     ]
     
     var fakeTracker = [Int]()

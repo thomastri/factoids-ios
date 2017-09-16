@@ -8,21 +8,34 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>Pods-Factoids.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>Pods-FactoidsTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>Pods-FactoidsUITests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>SwiftySound.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -32,7 +45,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>381BF082B4B8A394188D5CF614CBD88A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>44D60587063F93C542EE4D2D709E524F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>52C2042FD56E97E7577C44A006EFA7C6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
