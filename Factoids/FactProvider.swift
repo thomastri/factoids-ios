@@ -172,7 +172,15 @@ struct FactProvider {
         "There are more molecules in a cubic inch of water than there are stars in the observable universe.",
         "Fishing is the sport that kills the most Americans each year.",
         "The Twitter bird's name is Larry.",
-        "In terms of bear attacks: if it is brown, lay down. If it is black, get back."
+        "In terms of bear attacks: if it is brown, lay down. If it is black, get back.",
+        "The term 'Friend Zoned' was coined by popular sitcom Friends.",
+        "Amazon originally started as a book-selling company.",
+        "In North Korea, it is considered offensive to use a fork as an eating utinsel.",
+        "French fries originate from Belgium.",
+        "Toe wrestling was invented by the UK because they wanted to be the best-in-the-world at something.",
+        "Canada won the second international toe-wrestling competition in 1976.",
+        "Snoop Dogg got his name after Charlie Brown's Snoopy, his favorite cartoon as a child.",
+        "There were originally only ten months in a year."
     ]
     
     let fakes = [
@@ -317,7 +325,34 @@ struct FactProvider {
         "Sharks kill more humans per year than any other wild animal.",
         "Due to lack of dynamite, part of Mount Rushmore was created using cannonballs.",
         "There are more atoms in a drop of water than drops of water in the entire world.",
-        "If a snake bites you, you should suck the venom out so it doesn't spread through your body."
+        "If a snake bites you, you should suck the venom out so it doesn't spread through your body.",
+        "Season 1 of American Idol aired before text-message based voting became popular, so watchers had to mail in their votes.",
+        "Before he was a wrestler, Dwayne 'The Rock' Johnson studied to become a geologist.",
+        "Over 80% of North American death-row inmates ask for fast food as their final meal.",
+        "S. Truett Cathy, the creator of Chick Fil A, became a vegetarian four years after opening the first Chick Fil A restaurant.",
+        "Thomas Edison was also a boxer.",
+        "The phrase \"That's all folks\" was popularized by Benjamin Franklin.",
+        "The last Harry Potter book only sold 5,000 copies in Canada in its first month due to printing issues.",
+        "Police are also known as 'cops' because their badges were originally made out of copper.",
+        "The popular video game Super Mario Bros was based off a true story.",
+        "10% of Americans admit wanting to try cannibalism if it were legal and safe.",
+        "The Lord of the Rings is loosely based off of America's founding fathers.",
+        "Sharks can get dandruff.",
+        "After Pearl Harbor, anime was illegal in the United States for almost a decade.",
+        "In Canada, you can be arrested for running over a moose.",
+        "The last known reindeer was spotted in Wyoming.",
+        "Rapper T-Pain invented and made auto-tune popular in modern music.",
+        "Rapper Kanye West no longer eats fish.",
+        "Brain freeze kills 1-3 Americans every year.",
+        "In the late 1600s, hiccups were a sign of witchcraft and was often a crime punishable by death.",
+        "Carly Rae Jepsen made over $1B off her hit single 'Call Me Maybe'.",
+        "After Stephen King's 'It' hit the movie theaters in 1990, the clown industry declined by almost 500% over the next three years.",
+        "The discoverer of milk was arrested for beastiality.",
+        "Rapper 50 Cent got his name because he only had 50¢ to his name when he released his debut album.",
+        "95% of all statistics are made up.",
+        "Henry Ford, inventor of the first car, regretted his invention after car accidents were introduced into the world. He spent his later years trying to ban automobiles.",
+        "In 2016, 'Khaleesi' was the most popular name for newborn girls in the United States.",
+        "The Russian language has more curse words than any other language."
     ]
     
     var fakeTracker = [Int]()

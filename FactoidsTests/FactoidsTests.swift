@@ -59,6 +59,12 @@ class FactoidsTests: XCTestCase {
         }
     }
     
+    func testArraySizes() {
+        print("Facts: \(FactProvider().facts.count)")
+        print("Fakes: \(FactProvider().fakes.count)")
+        print("Total: \(FactProvider().fakes.count + FactProvider().facts.count)")
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
