@@ -136,7 +136,7 @@ struct FactProvider {
         "The average chocolate bar contains 3-8 insect legs.",
         "When hippos are angry, their sweat turns red.",
         "Facebook Addiction Disorder is an official disorder.",
-        "If you life a kangaroo's tail off the ground, it can't jump.",
+        "If you lift a kangaroo's tail off the ground, it can't jump.",
         "Billy goats urinate on their own heads to smell more attractive to females.",
         "During your lifetime, you'll salivate enough to fill two swimming pools",
         "The person who invented the frisbee was cremated and made into a frisbee.",
@@ -168,7 +168,11 @@ struct FactProvider {
         "In its early days, Hotmail had a security flaw that allowed users to log into any account using the password 'eh'.",
         "Rapper Soulja Boy did Crank Dat at the ripe age of 16.",
         "If you invested $1000 into BitCoin in April 2010, you would have over $1 billion in September 2017.",
-        "There are more people on FaceBook today than on Earth 200 years ago."
+        "There are more people on FaceBook today than on Earth 200 years ago.",
+        "There are more molecules in a cubic inch of water than there are stars in the observable universe.",
+        "Fishing is the sport that kills the most Americans each year.",
+        "The Twitter bird's name is Larry.",
+        "In terms of bear attacks: if it is brown, lay down. If it is black, get back."
     ]
     
     let fakes = [
@@ -289,7 +293,6 @@ struct FactProvider {
         "Rupert Grint, who played Ron Weasley in the Harry Potter films, got his role when JK Rowling accidentally pushed him off a cruise ship.",
         "Lobsters are immortal until a predator kills them.",
         "Male penguins search the entire beach for a pebble to propose to the penguin of their dreams.",
-        "The Twitter bird's name is Jerry.",
         "In India, building a snowman is punishable by death.",
         "One in ten women admit to eating their own children at least once.",
         "In Jamaica, squirrels were often kept to teach kids how to climb trees.",
@@ -312,7 +315,9 @@ struct FactProvider {
         "Pluto, being a gaseous planet, has the same properties found in an ordinary plum. In other words, Pluto likely smells like a plum.",
         "The average software developer can bench press 300 pounds.",
         "Sharks kill more humans per year than any other wild animal.",
-        "Due to lack of dynamite, part of Mount Rushmore was created using cannonballs."
+        "Due to lack of dynamite, part of Mount Rushmore was created using cannonballs.",
+        "There are more atoms in a drop of water than drops of water in the entire world.",
+        "If a snake bites you, you should suck the venom out so it doesn't spread through your body."
     ]
     
     var fakeTracker = [Int]()
