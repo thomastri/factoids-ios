@@ -352,7 +352,8 @@ struct FactProvider {
         "95% of all statistics are made up.",
         "Henry Ford, inventor of the first car, regretted his invention after car accidents were introduced into the world. He spent his later years trying to ban automobiles.",
         "In 2016, 'Khaleesi' was the most popular name for newborn girls in the United States.",
-        "The Russian language has more curse words than any other language."
+        "The Russian language has more curse words than any other language.",
+        "The smell of freshly mowed grass is actually chemicals that grass releases to warn other grass of the oncoming danger."
     ]
     
     var fakeTracker = [Int]()
