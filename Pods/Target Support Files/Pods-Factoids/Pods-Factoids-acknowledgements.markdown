@@ -26,6 +26,10 @@ This application makes use of the following third party libraries:
 > SOFTWARE. 
 
 
+## Google-Mobile-Ads-SDK
+
+Copyright 2017 Google
+
 ## SwiftySound
 
 MIT License

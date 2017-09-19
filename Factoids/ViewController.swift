@@ -9,8 +9,9 @@
 import UIKit
 import ChameleonFramework
 import SwiftySound
+import GoogleMobileAds
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, GADBannerViewDelegate {
 
     /* 1. @IBOutlet, interface builder outlet lets compiler know that this is
             an interface code piece. Syncs the corresponding button up with our
@@ -39,6 +40,9 @@ class ViewController: UIViewController {
         
         factoidLabel.text = factProvider.randomFact()
         highScore.text = "High Score: \(factProvider.updateAndGetHighScore())"
+        
+        // loads banner ad
+        adBannerView.load(GADRequest())
     }
 
     override func didReceiveMemoryWarning() {
@@ -98,7 +102,36 @@ class ViewController: UIViewController {
         
         updateScores()
     }
+    /*
+     ----------- START BANNER ADS -----------
+     */
     
+    // View to be used for banner ad
+    // lazy allows for initialization later rather than now
+    lazy var adBannerView: GADBannerView = {
+        
+        // smartBanners adjust width / size accordingly
+        let adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        adBannerView.adUnitID = "ca-app-pub-9581090984969636/5782838902"
+        adBannerView.delegate = self
+        adBannerView.rootViewController = self
+        
+        return adBannerView
+    }()
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        print("Banner loaded successfully")
+        view.addSubview(bannerView)
+    }
+    
+    func adView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: GADRequestError) {
+        print("Fail to receive ads")
+        print(error)
+    }
+    
+    /*
+     ----------- END BANNER ADS -----------
+     */
     // TODO: refactor methods from FactProvider over to ViewController in order to
     // animate and color scores on every wrong answer and high score updates
 }

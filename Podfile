@@ -9,6 +9,7 @@ target 'Factoids' do
   # Pods for Factoids
     pod 'ChameleonFramework'
     pod 'SwiftySound'
+    pod 'Google-Mobile-Ads-SDK'
 
   target 'FactoidsTests' do
     inherit! :search_paths
