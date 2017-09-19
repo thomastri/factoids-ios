@@ -102,6 +102,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         
         updateScores()
     }
+    
     /*
      ----------- START BANNER ADS -----------
      */
@@ -112,9 +113,17 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         
         // smartBanners adjust width / size accordingly
         let adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
-        adBannerView.adUnitID = "ca-app-pub-9581090984969636/5782838902"
+        adBannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+        
+        // adBannerView.adUnitID = "ca-app-pub-9581090984969636/5782838902"
         adBannerView.delegate = self
         adBannerView.rootViewController = self
+        
+        // Moves the banner down to not cover the status bar at the top
+        adBannerView.frame = CGRect(x: 0.0,
+                                  y: UIApplication.shared.statusBarFrame.size.height,
+                                  width: adBannerView.frame.width,
+                                  height: adBannerView.frame.height)
         
         return adBannerView
     }()
@@ -132,6 +141,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     /*
      ----------- END BANNER ADS -----------
      */
+    
     // TODO: refactor methods from FactProvider over to ViewController in order to
     // animate and color scores on every wrong answer and high score updates
 }
