@@ -38,6 +38,9 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         super.viewDidLoad() // any code they write gets run before our code
         let _ = Sound.enabled
         
+        factoidButton.layer.cornerRadius = 10
+        factoidFakeButton.layer.cornerRadius = 10
+        
         factoidLabel.text = factProvider.randomFact()
         highScore.text = "High Score: \(factProvider.updateAndGetHighScore())"
         
@@ -74,7 +77,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     }
 
     // Every time FactButton is pressed, this method is called
-    @IBAction func showFact() {
+    @IBAction func realFactPress() {
         
         changeBGColor()
         newFact()
