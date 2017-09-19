@@ -116,8 +116,11 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         
         // smartBanners adjust width / size accordingly
         let adBannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait)
+        
+        // Test banner:
         adBannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
         
+        // Real $$$ banner:
         // adBannerView.adUnitID = "ca-app-pub-9581090984969636/5782838902"
         adBannerView.delegate = self
         adBannerView.rootViewController = self
