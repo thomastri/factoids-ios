@@ -30,6 +30,8 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     @IBOutlet weak var factoidFakeButton: UIButton!
     @IBOutlet weak var highScore: UILabel!
     
+    @IBOutlet weak var timerLabel: UILabel!
+    
     var factProvider = FactProvider()
     let colorProvider = BackgroundColorProvider()
     var factOrFake = 2
@@ -43,6 +45,8 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         
         factoidLabel.text = factProvider.randomFact()
         highScore.text = "High Score: \(factProvider.updateAndGetHighScore())"
+        
+        startTimer()
         
         // loads banner ad
         adBannerView.load(GADRequest())
@@ -59,7 +63,39 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         factoidButton.tintColor = randomColor
     }
     
+    // MARK:- Timer
+    var timer = Timer()
+    var seconds = 11
+    var isTimerRunning = false
+    
+    // Starts the timer
+    func startTimer() {
+        isTimerRunning = true
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
+    }
+    
+    // This func is called every second
+    func updateTimer() {
+        if seconds == 0 {
+            factProvider.resetScore()
+            updateScores()
+            newFact()
+        } else {
+            seconds -= 1
+            timerLabel.text = "\(seconds)"
+        }
+    }
+    
     func newFact() {
+        // If a timer is running, disable it so two or more timers can't run at the same time
+        if isTimerRunning {
+            timer.invalidate()
+            seconds = 11
+        }
+        
+        // Starts the timer
+        startTimer()
+        
         factOrFake = factProvider.getFactOrFake() // 0 or 1 for random fact
         factoidLabel.textColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true)
         factoidLabel.text = factProvider.randomFact() // re-rolls factOrFake, presents a fact
@@ -78,7 +114,6 @@ class ViewController: UIViewController, GADBannerViewDelegate {
 
     // Every time FactButton is pressed, this method is called
     @IBAction func realFactPress() {
-        
         changeBGColor()
         newFact()
         
@@ -93,7 +128,6 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     }
     
     @IBAction func fakeFactPress() {
-        
         changeBGColor()
         newFact()
         
