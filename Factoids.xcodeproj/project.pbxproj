@@ -106,8 +106,8 @@
 				62262C1B1F708DF10059E3C7 /* right.wav */,
 			);
 			name = sounds;
-			path = "New Group";
-			sourceTree = "<group>";
+			path = Factoids/Sounds;
+			sourceTree = SOURCE_ROOT;
 		};
 		625561A71F57515200AA1C89 = {
 			isa = PBXGroup;
@@ -266,6 +266,7 @@
 				TargetAttributes = {
 					625561AF1F57515200AA1C89 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = D257YZMABH;
 						ProvisioningStyle = Automatic;
 					};
 					625561C31F57515200AA1C89 = {
@@ -646,7 +647,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = D257YZMABH;
 				INFOPLIST_FILE = Factoids/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thomastri.Factoids;
@@ -661,7 +662,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = D257YZMABH;
 				INFOPLIST_FILE = Factoids/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thomastri.Factoids;
