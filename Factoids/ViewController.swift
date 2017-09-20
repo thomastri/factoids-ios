@@ -83,6 +83,9 @@ class ViewController: UIViewController, GADBannerViewDelegate {
             updateScores()
             newFact()
         } else {
+            if (seconds <= 4) {
+                timerAnimation.labelTextColor = .red
+            }
             seconds -= 1
 //            timerLabel.text = "\(seconds)"
         }
@@ -185,7 +188,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         adBannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
         
         // Real $$$ banner:
-        // adBannerView.adUnitID = "ca-app-pub-9581090984969636/5782838902"
+//        adBannerView.adUnitID = "ca-app-pub-9581090984969636/5782838902"
         adBannerView.delegate = self
         adBannerView.rootViewController = self
         
