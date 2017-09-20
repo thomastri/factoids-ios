@@ -36,7 +36,6 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     var factProvider = FactProvider()
     let colorProvider = BackgroundColorProvider()
     var factOrFake = 2
-
     
     override func viewDidLoad() {
         super.viewDidLoad() // any code they write gets run before our code
