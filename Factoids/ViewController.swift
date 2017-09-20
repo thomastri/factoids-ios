@@ -10,6 +10,7 @@ import UIKit
 import ChameleonFramework
 import SwiftySound
 import GoogleMobileAds
+import SRCountdownTimer
 
 class ViewController: UIViewController, GADBannerViewDelegate {
 
@@ -30,11 +31,12 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     @IBOutlet weak var factoidFakeButton: UIButton!
     @IBOutlet weak var highScore: UILabel!
     
-    @IBOutlet weak var timerLabel: UILabel!
+    @IBOutlet weak var timerAnimation: SRCountdownTimer!
     
     var factProvider = FactProvider()
     let colorProvider = BackgroundColorProvider()
     var factOrFake = 2
+
     
     override func viewDidLoad() {
         super.viewDidLoad() // any code they write gets run before our code
@@ -45,6 +47,12 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         
         factoidLabel.text = factProvider.randomFact()
         highScore.text = "High Score: \(factProvider.updateAndGetHighScore())"
+        
+        factoidNumber.text = "Factoid #\(factProvider.getFactNum()):"
+        
+        changeBGColor()
+        changeTextColor()
+        changeTimerColor()
         
         startTimer()
         
@@ -57,21 +65,18 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func changeBGColor() {
-        let randomColor = colorProvider.randomColors()
-        view.backgroundColor = randomColor
-        factoidButton.tintColor = randomColor
-    }
-    
     // MARK:- Timer
     var timer = Timer()
-    var seconds = 11
+    var seconds = 10
     var isTimerRunning = false
     
     // Starts the timer
     func startTimer() {
         isTimerRunning = true
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
+        
+        changeTimerColor()
+        timerAnimation.start(beginingValue: 10, interval: 1)
     }
     
     // This func is called every second
@@ -82,7 +87,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
             newFact()
         } else {
             seconds -= 1
-            timerLabel.text = "\(seconds)"
+//            timerLabel.text = "\(seconds)"
         }
     }
     
@@ -90,18 +95,20 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         // If a timer is running, disable it so two or more timers can't run at the same time
         if isTimerRunning {
             timer.invalidate()
-            seconds = 11
+            seconds = 10
         }
         
-        // Starts the timer
-        startTimer()
+        changeBGColor()
         
         factOrFake = factProvider.getFactOrFake() // 0 or 1 for random fact
-        factoidLabel.textColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true)
         factoidLabel.text = factProvider.randomFact() // re-rolls factOrFake, presents a fact
         
         factoidNumber.text = "Factoid #\(factProvider.getFactNum()):"
-        factoidNumber.textColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true, alpha: 0.5)
+        
+        changeTextColor()
+        
+        // Starts the timer
+        startTimer()
     }
     
     func updateScores() {
@@ -114,7 +121,6 @@ class ViewController: UIViewController, GADBannerViewDelegate {
 
     // Every time FactButton is pressed, this method is called
     @IBAction func realFactPress() {
-        changeBGColor()
         newFact()
         
         if (factOrFake == 0) {
@@ -128,7 +134,6 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     }
     
     @IBAction func fakeFactPress() {
-        changeBGColor()
         newFact()
         
         if (factOrFake == 1) {
@@ -138,6 +143,23 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         }
         
         updateScores()
+    }
+    
+    
+    fileprivate func changeTimerColor() {
+        timerAnimation.lineColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true, alpha: 0.6)
+        timerAnimation.labelTextColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true, alpha: 0.6)
+    }
+    
+    fileprivate func changeBGColor() {
+        let randomColor = colorProvider.randomColors()
+        view.backgroundColor = randomColor
+        factoidButton.tintColor = randomColor
+    }
+    
+    fileprivate func changeTextColor() {
+        factoidLabel.textColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true)
+        factoidNumber.textColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true, alpha: 0.5)
     }
     
     /*
