@@ -36,7 +36,6 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     var factProvider = FactProvider()
     let colorProvider = BackgroundColorProvider()
     var factOrFake = 2
-
     
     override func viewDidLoad() {
         super.viewDidLoad() // any code they write gets run before our code
@@ -50,9 +49,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         
         factoidNumber.text = "Factoid #\(factProvider.getFactNum()):"
         
-        changeBGColor()
-        changeTextColor()
-        changeTimerColor()
+        changeColors()
         
         startTimer()
         
@@ -115,8 +112,7 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         factoidScore.text = "Score: \(factProvider.getScore())"
         highScore.text = "High Score: \(factProvider.updateAndGetHighScore())"
         
-        factoidScore.textColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true, alpha: 0.75)
-        highScore.textColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true, alpha: 0.85)
+        changeScoreColor()
     }
 
     // Every time FactButton is pressed, this method is called
@@ -160,6 +156,18 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     fileprivate func changeTextColor() {
         factoidLabel.textColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true)
         factoidNumber.textColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true, alpha: 0.5)
+    }
+    
+    fileprivate func changeScoreColor() {
+        factoidScore.textColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true, alpha: 0.75)
+        highScore.textColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true, alpha: 0.85)
+    }
+    
+    fileprivate func changeColors() {
+        changeBGColor()
+        changeTextColor()
+        changeTimerColor()
+        changeScoreColor()
     }
     
     /*
