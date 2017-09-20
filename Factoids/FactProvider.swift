@@ -180,7 +180,8 @@ struct FactProvider {
         "Toe wrestling was invented by the UK because they wanted to be the best-in-the-world at something.",
         "Canada won the second international toe-wrestling competition in 1976.",
         "Snoop Dogg got his name after Charlie Brown's Snoopy, his favorite cartoon as a child.",
-        "There were originally only ten months in a year."
+        "There were originally only ten months in a year.",
+        "Pluto is a planet."
     ]
     
     let fakes = [
