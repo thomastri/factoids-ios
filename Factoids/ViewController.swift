@@ -182,6 +182,8 @@ class ViewController: UIViewController, GADBannerViewDelegate {
      ----------- END BANNER ADS -----------
      */
     
+    // Timer comment test
+    
     // TODO: refactor methods from FactProvider over to ViewController in order to
     // animate and color scores on every wrong answer and high score updates
 }
