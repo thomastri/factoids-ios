@@ -70,10 +70,9 @@ class ViewController: UIViewController, GADBannerViewDelegate {
     // Starts the timer
     func startTimer() {
         isTimerRunning = true
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
-        
         changeTimerColor()
         timerAnimation.start(beginingValue: 10, interval: 1)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
     }
     
     // This func is called every second
