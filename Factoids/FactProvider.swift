@@ -181,7 +181,32 @@ struct FactProvider {
         "Canada won the second international toe-wrestling competition in 1976.",
         "Snoop Dogg got his name after Charlie Brown's Snoopy, his favorite cartoon as a child.",
         "There were originally only ten months in a year.",
-        "Pluto is a planet."
+        "Pluto is a planet.",
+        "SPAM is short for spiced ham.",
+        "Pringles had a lawsuit trying to claim that Pringles weren't potato chips.",
+        "'Wasabi' is usually just colored horseradish.",
+        "Green peas are a popular pizza topping in Brazil.",
+        "Chocolate was once used as currency.",
+        "Sardinia has a cheese that is intentionally filled with maggots.",
+        "McDonald's sells 75+ burgers at any given second.",
+        "Consuming bananas can help fight depression.",
+        "Honey is made with bee vomit.",
+        "The creator of Atari also created Chuck E. Cheese.",
+        "Pretzels were invented as a religious snack. The twists represent crossed arms for prayer.",
+        "Popsicles were invented by an 11 year old.",
+        "Most crackers have holes in them to prevent air bubbles from ruining the baking process.",
+        "China has a one-child only policy to fight overpopulation. Tens of thousands of babies are abandoned each year.",
+        "Dentures used to made from the teeth of dead soldiers. RIP.",
+        "A Roman emperor once made his horse a senator.",
+        "A common Mayan sacrifice involved pulling a heart out of a living person.",
+        "In ancient Egypt, people used to be smeared with honey in order to attracts flies away from the Pharoah. RIP.",
+        "Romans used to use urine as mouthwash.",
+        "The Austrian army once attacked itself and lost ~10,000 soldiers.",
+        "Coffins used to be built with bells because being buried alive was so common.",
+        "In medieval times, animals used to be put on trial.",
+        "In Canada, women used to drink beaver-testicle potions as a form of contraception.",
+        "Europeans from the 16th and 17th centuries used to eat corspes in effort to cure diseases.",
+        "Saddam Hussein was given the key to the city of Detroit."
     ]
     
     let fakes = [
@@ -354,7 +379,8 @@ struct FactProvider {
         "Henry Ford, inventor of the first car, regretted his invention after car accidents were introduced into the world. He spent his later years trying to ban automobiles.",
         "In 2016, 'Khaleesi' was the most popular name for newborn girls in the United States.",
         "The Russian language has more curse words than any other language.",
-        "The smell of freshly mowed grass is actually chemicals that grass releases to warn other grass of the oncoming danger."
+        "The smell of freshly mowed grass is actually chemicals that grass releases to warn other grass of the oncoming danger.",
+        "The state mascot of Illinois is Superman.",
     ]
     
     var fakeTracker = [Int]()
