@@ -396,7 +396,12 @@ struct FactProvider {
         "The state mascot of Illinois is Superman.",
         "Your tongue has sections with taste buds for each flavor.",
         "Star Wars was based on a true story.",
-        "Men cannot pee with an erection."
+        "Men cannot pee with an erection.",
+        "Due to religious disputes, Neil Degrasse Tyson and Bill Nye the Science Guy have an ongoing feud.",
+        "Before horses were popular in the United States, nearly 70% of people rode their slaves to the store as the main source of transportation.",
+        "Red Bull was once sued for false advertising because it did not in fact give you wings.",
+        "Michael Jordan's net worth increased by nearly $75 million after Space Jam released.",
+        "During a televised fight, Bruce Lee once kicked a man so hard his opponent flew out of their shoes and socks. This was the origin of the term 'knock your socks off'."
     ]
     
     var fakeTracker = [Int]()
