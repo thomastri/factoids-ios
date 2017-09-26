@@ -206,7 +206,20 @@ struct FactProvider {
         "In medieval times, animals used to be put on trial.",
         "In Canada, women used to drink beaver-testicle potions as a form of contraception.",
         "Europeans from the 16th and 17th centuries used to eat corspes in effort to cure diseases.",
-        "Saddam Hussein was given the key to the city of Detroit."
+        "Saddam Hussein was given the key to the city of Detroit.",
+        "Krakatoa had a volcanic eruption in 1883 that could be heard from 3,000 miles away.",
+        "The sound of snow falling to the ground is actually static discharge the snow gains when it falls to the earth.",
+        "The Pillars of Creation was first spotted by the Hubble in 1995. The Pillars of Creation also ceased to exist over 6,000 years ago.",
+        "When Mt Everest was first measured, the number was so round that they added a few fake inches for believability.",
+        "Naked mole rats, like Rufus, can't get cancer.",
+        "From the first time Pluto was spotted in 1930 to the time it was demoted from being a planet 2006, Pluto didn't complete a single revolution around the sun.",
+        "Orcas are a natural predator of moose.",
+        "All of the planets in our solar system can fit in between the Earth and moon, but the Sun cannot.",
+        "A cumulus cloud can weigh over 1,000,000 pounds, or roughly 454,000 kg.",
+        "In a room of 23 people, there is a 50% chance that 2 of them have the same birthday.",
+        "Russia is bigger than Pluto.",
+        "There is a conspiracy theory that claims rapper Eminem is dead, and the Eminem we see today is an imposter.",
+        "The sound your fingers make when you snap your fingers is just your middle finger hitting your palm."
     ]
     
     let fakes = [
@@ -381,6 +394,9 @@ struct FactProvider {
         "The Russian language has more curse words than any other language.",
         "The smell of freshly mowed grass is actually chemicals that grass releases to warn other grass of the oncoming danger.",
         "The state mascot of Illinois is Superman.",
+        "Your tongue has sections with taste buds for each flavor.",
+        "Star Wars was based on a true story.",
+        "Men cannot pee with an erection."
     ]
     
     var fakeTracker = [Int]()
