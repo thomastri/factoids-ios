@@ -11,8 +11,9 @@ import ChameleonFramework
 import SwiftySound
 import GoogleMobileAds
 import SRCountdownTimer
+import GameKit
 
-class ViewController: UIViewController, GADBannerViewDelegate {
+class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterControllerDelegate {
 
     /* 1. @IBOutlet, interface builder outlet lets compiler know that this is
             an interface code piece. Syncs the corresponding button up with our
@@ -43,6 +44,10 @@ class ViewController: UIViewController, GADBannerViewDelegate {
         
         factoidButton.layer.cornerRadius = 10
         factoidFakeButton.layer.cornerRadius = 10
+        
+        
+        // Call the GC authentication controller
+        authenticateLocalPlayer()
         
         factoidLabel.text = factProvider.randomFact()
         highScore.text = "High Score: \(factProvider.updateAndGetHighScore())"
@@ -214,9 +219,55 @@ class ViewController: UIViewController, GADBannerViewDelegate {
      ----------- END BANNER ADS -----------
      */
     
-    // Timer comment test
+    // MARK: GameCenter leaderboards
     
-    // TODO: refactor methods from FactProvider over to ViewController in order to
-    // animate and color scores on every wrong answer and high score updates
+    /* Variables */
+    var gcEnabled = Bool() // Check if the user has Game Center enabled
+    var gcDefaultLeaderBoard = String() // Check the default leaderboardID
+    
+    var score = 0
+    
+    let LEADERBOARD_ID = "highScore"
+    
+    // MARK: - AUTHENTICATE LOCAL PLAYER
+    func authenticateLocalPlayer() {
+        let localPlayer: GKLocalPlayer = GKLocalPlayer.localPlayer()
+        
+        localPlayer.authenticateHandler = {(ViewController, error) -> Void in
+            if((ViewController) != nil) {
+                // 1. Show login if player is not logged in
+                self.present(ViewController!, animated: true, completion: nil)
+            } else if (localPlayer.isAuthenticated) {
+                // 2. Player is already authenticated & logged in, load game center
+                self.gcEnabled = true
+                
+                // Get the default leaderboard ID
+                localPlayer.loadDefaultLeaderboardIdentifier(completionHandler: { (leaderboardIdentifer, error) in
+                    if error != nil { print("There was an error!")
+                    } else { self.gcDefaultLeaderBoard = leaderboardIdentifer! }
+                })
+                
+            } else {
+                // 3. Game center is not enabled on the users device
+                self.gcEnabled = false
+                print("Local player could not be authenticated!")
+            }
+        }
+    }
+    
+    @IBAction func gcLeaderboards(_ sender: Any) {
+        let gcVC = GKGameCenterViewController()
+        gcVC.gameCenterDelegate = self
+        gcVC.viewState = .leaderboards
+        gcVC.leaderboardIdentifier = LEADERBOARD_ID
+        present(gcVC, animated: true, completion: nil)
+    }
+    
+    
+    // Delegate to dismiss the GC controller
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
+    }
+
 }
 

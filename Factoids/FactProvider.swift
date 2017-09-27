@@ -452,6 +452,21 @@ struct FactProvider {
         if (score >= highScore) {
             highScore = score
         }
+        
+        submitHighScoreToGC(highScore)
+    }
+    
+    func submitHighScoreToGC(_ highScore : Int) -> Void {
+        // Submit score to GC leaderboard
+        let bestScoreInt = GKScore(leaderboardIdentifier: "highScore")
+        bestScoreInt.value = Int64(highScore)
+        GKScore.report([bestScoreInt]) { (error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            } else {
+                print("Best Score submitted to Leaderboard!")
+            }
+        }
     }
     
     func getFactNum() -> Int {

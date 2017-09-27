@@ -2,4 +2,102 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Factoids/FactProvider.swift"
+            timestampString = "528228063.823656"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "facts"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "variable initialization expression of Factoids.FactProvider.facts : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Factoids"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tle/Documents/factoids-ios/Factoids/FactProvider.swift"
+                  timestampString = "528157461.150425"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "3072">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Factoids.FactProvider.init(randomNumber: Swift.Int, factOrFake: Swift.Int, score: Swift.Int, fakeTracker: Swift.Array&lt;Swift.Int&gt;, factTracker: Swift.Array&lt;Swift.Int&gt;) -&gt; Factoids.FactProvider"
+                  moduleName = "Factoids"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tle/Documents/factoids-ios/Factoids/FactProvider.swift"
+                  timestampString = "528157461.152136"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "3100">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Factoids/FactProvider.swift"
+            timestampString = "528228063.82382"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "403"
+            endingLineNumber = "403"
+            landmarkName = "fakes"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "variable initialization expression of Factoids.FactProvider.fakes : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Factoids"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tle/Documents/factoids-ios/Factoids/FactProvider.swift"
+                  timestampString = "528157463.945643"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "403"
+                  endingLineNumber = "403"
+                  offsetFromSymbolStart = "7124">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Factoids.FactProvider.init(randomNumber: Swift.Int, factOrFake: Swift.Int, score: Swift.Int, fakeTracker: Swift.Array&lt;Swift.Int&gt;, factTracker: Swift.Array&lt;Swift.Int&gt;) -&gt; Factoids.FactProvider"
+                  moduleName = "Factoids"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tle/Documents/factoids-ios/Factoids/FactProvider.swift"
+                  timestampString = "528157463.947479"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "403"
+                  endingLineNumber = "403"
+                  offsetFromSymbolStart = "15028">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -10,13 +10,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Factoids/FactProvider.swift"
-            timestampString = "528088196.881148"
+            timestampString = "528228063.823177"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "104"
             endingLineNumber = "104"
             landmarkName = "facts"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "variable initialization expression of Factoids.FactProvider.facts : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Factoids"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tle/Documents/factoids-ios/Factoids/FactProvider.swift"
+                  timestampString = "528157461.164326"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "3112">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Factoids.FactProvider.init(randomNumber: Swift.Int, factOrFake: Swift.Int, score: Swift.Int, fakeTracker: Swift.Array&lt;Swift.Int&gt;, factTracker: Swift.Array&lt;Swift.Int&gt;) -&gt; Factoids.FactProvider"
+                  moduleName = "Factoids"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tle/Documents/factoids-ios/Factoids/FactProvider.swift"
+                  timestampString = "528157461.166248"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "104"
+                  endingLineNumber = "104"
+                  offsetFromSymbolStart = "3140">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Factoids/FactProvider.swift"
-            timestampString = "528088196.88201"
+            timestampString = "528228063.823531"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "264"
@@ -74,13 +106,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Factoids/FactProvider.swift"
-            timestampString = "528088196.882073"
+            timestampString = "528228063.823598"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "105"
             endingLineNumber = "105"
             landmarkName = "facts"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "variable initialization expression of Factoids.FactProvider.facts : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "Factoids"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tle/Documents/factoids-ios/Factoids/FactProvider.swift"
+                  timestampString = "528157461.098122"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "3152">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Factoids.FactProvider.init(randomNumber: Swift.Int, factOrFake: Swift.Int, score: Swift.Int, fakeTracker: Swift.Array&lt;Swift.Int&gt;, factTracker: Swift.Array&lt;Swift.Int&gt;) -&gt; Factoids.FactProvider"
+                  moduleName = "Factoids"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tle/Documents/factoids-ios/Factoids/FactProvider.swift"
+                  timestampString = "528157461.111894"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "105"
+                  endingLineNumber = "105"
+                  offsetFromSymbolStart = "3180">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
