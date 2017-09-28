@@ -319,7 +319,10 @@ struct FactProvider {
         "In a room of 23 people, there is a 50% chance that 2 of them have the same birthday.",
         "Russia is bigger than Pluto.",
         "There is a conspiracy theory that claims rapper Eminem is dead, and the Eminem we see today is an imposter.",
-        "The sound your fingers make when you snap your fingers is just your middle finger hitting your palm."
+        "The sound your fingers make when you snap your fingers is just your middle finger hitting your palm.",
+        "Much like how humans find puppies cute, elephants think humans are cute.",
+        "Many dolphins can create games with actual winners and losers. When dolphins are transferred to different zoos, they teach their new dolphin friends the games they know.",
+        "Squirrels tend to forget where their acorns are buried, inadvertedly planting trees."
     ]
     
     let fakes = [
@@ -501,6 +504,8 @@ struct FactProvider {
         "Before horses were popular in the United States, nearly 70% of people rode their slaves to the store as the main source of transportation.",
         "Red Bull was once sued for false advertising because it did not in fact give you wings.",
         "Michael Jordan's net worth increased by nearly $75 million after Space Jam released.",
-        "During a televised fight, Bruce Lee once kicked a man so hard his opponent flew out of their shoes and socks. This was the origin of the term 'knock your socks off'."
+        "During a televised fight, Bruce Lee once kicked a man so hard his opponent flew out of their shoes and socks. This was the origin of the term 'knock your socks off'.",
+        "Squirrels are actually super-intelligent creatures who are plotting to destroy the world.",
+        "North America and South America are actually one big country."
     ]
 }
