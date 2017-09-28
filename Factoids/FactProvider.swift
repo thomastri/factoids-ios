@@ -23,6 +23,106 @@ struct FactProvider {
         }
     }
     
+    var fakeTracker = [Int]()
+    var factTracker = [Int]()
+    
+    mutating func randomFake() -> String {
+        
+        // avoids duplicates each session
+        repeat {
+            randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: fakes.count)
+        } while(fakeTracker.contains(randomNumber))
+        
+        fakeTracker.append(randomNumber)
+        
+        return fakes[randomNumber]
+    }
+    
+    mutating func randomReal() -> String {
+        
+        // avoids duplicates each session
+        repeat {
+            randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: facts.count)
+        } while(factTracker.contains(randomNumber))
+        
+        factTracker.append(randomNumber)
+        
+        return facts[randomNumber]
+    }
+    
+    mutating func randomFact() -> String {
+        // does not include upper bound
+        factOrFake = GKRandomSource.sharedRandom().nextInt(upperBound: 2)
+        
+        if (factOrFake == 1) {
+            return randomFake()
+        }
+        
+        // factOrFake == 0
+        return randomReal()
+    }
+    
+    mutating func updateAndGetHighScore() -> Int {
+        updateHighScore()
+        return highScore
+    }
+    
+    mutating func updateHighScore() -> Void {
+        if (score >= highScore) {
+            highScore = score
+        }
+        
+        submitHighScoreToGC(highScore)
+    }
+    
+    func submitHighScoreToGC(_ highScore : Int) -> Void {
+        // Submit score to GC leaderboard
+        let bestScoreInt = GKScore(leaderboardIdentifier: "highScore")
+        bestScoreInt.value = Int64(highScore)
+        GKScore.report([bestScoreInt]) { (error) in
+            if error != nil {
+                print(error!.localizedDescription)
+            } else {
+                print("Best Score submitted to Leaderboard!")
+            }
+        }
+    }
+    
+    func getFactNum() -> Int {
+        return randomNumber + 1
+    }
+    
+    func getFactOrFake() -> Int {
+        return factOrFake
+    }
+    
+    func correctSound () -> Void {
+        Sound.play(file: "right.wav")
+    }
+    
+    func incorrectSound() -> Void {
+        Sound.play(file: "wrong.wav")
+    }
+    
+    mutating func resetScore() -> Void {
+        score = 0
+        incorrectSound()
+        
+        // resets duplicate checker after game over
+        factTracker.removeAll()
+        fakeTracker.removeAll()
+        
+    }
+    
+    mutating func increaseScore() -> Void {
+        score += 1
+        correctSound()
+    }
+    
+    func getScore() -> Int {
+        return score
+    }
+    
     let facts = [
         "Ants stretch when they wake up in the morning.",
         "Ostriches can run faster than horses.",
@@ -403,105 +503,4 @@ struct FactProvider {
         "Michael Jordan's net worth increased by nearly $75 million after Space Jam released.",
         "During a televised fight, Bruce Lee once kicked a man so hard his opponent flew out of their shoes and socks. This was the origin of the term 'knock your socks off'."
     ]
-    
-    var fakeTracker = [Int]()
-    var factTracker = [Int]()
-    
-    mutating func randomFake() -> String {
-        
-        // avoids duplicates each session
-        repeat {
-            randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: fakes.count)
-        } while(fakeTracker.contains(randomNumber))
-        
-        fakeTracker.append(randomNumber)
-        
-        return fakes[randomNumber]
-    }
-    
-    mutating func randomReal() -> String {
-        
-        // avoids duplicates each session
-        repeat {
-            randomNumber = GKRandomSource.sharedRandom().nextInt(upperBound: facts.count)
-        } while(factTracker.contains(randomNumber))
-        
-        factTracker.append(randomNumber)
-        
-        return facts[randomNumber]
-    }
-    
-    mutating func randomFact() -> String {
-        // does not include upper bound
-        factOrFake = GKRandomSource.sharedRandom().nextInt(upperBound: 2)
-        
-        if (factOrFake == 1) {
-            return randomFake()
-        }
-        
-        // factOrFake == 0
-        return randomReal()
-    }
-    
-    mutating func updateAndGetHighScore() -> Int {
-        updateHighScore()
-        return highScore
-    }
-    
-    mutating func updateHighScore() -> Void {
-        if (score >= highScore) {
-            highScore = score
-        }
-        
-        submitHighScoreToGC(highScore)
-    }
-    
-    func submitHighScoreToGC(_ highScore : Int) -> Void {
-        // Submit score to GC leaderboard
-        let bestScoreInt = GKScore(leaderboardIdentifier: "highScore")
-        bestScoreInt.value = Int64(highScore)
-        GKScore.report([bestScoreInt]) { (error) in
-            if error != nil {
-                print(error!.localizedDescription)
-            } else {
-                print("Best Score submitted to Leaderboard!")
-            }
-        }
-    }
-    
-    func getFactNum() -> Int {
-        return randomNumber + 1
-    }
-    
-    func getFactOrFake() -> Int {
-        return factOrFake
-    }
-
-    func correctSound () -> Void {
-        Sound.play(file: "right.wav")
-    }
-    
-    func incorrectSound() -> Void {
-        Sound.play(file: "wrong.wav")
-    }
-    
-    mutating func resetScore() -> Void {
-        score = 0
-        incorrectSound()
-        
-        // resets duplicate checker after game over
-        factTracker.removeAll()
-        fakeTracker.removeAll()
-    }
-    
-    mutating func increaseScore() -> Void {
-        score += 1
-        correctSound()
-    }
-    
-    func getScore() -> Int {
-        return score
-    }
-    
-    
 }

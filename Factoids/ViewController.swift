@@ -12,6 +12,7 @@ import SwiftySound
 import GoogleMobileAds
 import SRCountdownTimer
 import GameKit
+import Spring
 
 class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterControllerDelegate {
 
@@ -25,7 +26,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterContr
             it is loaded as needed and may not always be there
  
      */
-    @IBOutlet weak var factoidLabel: UILabel!
+    @IBOutlet weak var factoidLabel: SpringLabel!
     @IBOutlet weak var factoidButton: UIButton!
     @IBOutlet weak var factoidNumber: UILabel!
     @IBOutlet weak var factoidScore: UILabel!
@@ -84,6 +85,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterContr
     func updateTimer() {
         if seconds == 0 {
             factProvider.resetScore()
+
             updateScores()
             newFact()
         } else {
@@ -130,6 +132,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterContr
             factProvider.increaseScore()
         } else {
             factProvider.resetScore()
+            animateWrongFact()
         }
 
         updateScores()
@@ -143,9 +146,17 @@ class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterContr
             factProvider.increaseScore()
         } else {
             factProvider.resetScore()
+            animateWrongFact()
         }
         
         updateScores()
+    }
+    
+    fileprivate func animateWrongFact() {
+        UIView.transition(with: factoidLabel, duration: 0.3, options: .transitionCrossDissolve, animations: { self.factoidLabel.textColor = UIColor.red }, completion: nil)
+        
+        factoidLabel.animation = "wobble"
+        factoidLabel.animate()
     }
     
     
@@ -268,6 +279,74 @@ class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterContr
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
         gameCenterViewController.dismiss(animated: true, completion: nil)
     }
+    
+    // MARK: In-app review
+    
+    let runIncrementerSetting = "numberOfRuns"  // UserDefauls dictionary key where we store number of runs
+    let minimumRunCount = 3
+    
+    var askForRatingsFlag: Bool {
+        get {
+            return UserDefaults.standard.bool(forKey: "askForRatings")
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "askForRatings")
+        }
+    }
+    
+    func incrementAppRuns() {                   // counter for number of runs for the app. You can call this from App Delegate
+        
+        let usD = UserDefaults()
+        let runs = getRunCounts() + 1
+        usD.setValuesForKeys([runIncrementerSetting: runs])
+        usD.synchronize()
+        
+    }
+    
+    func getRunCounts () -> Int {               // Reads number of runs from UserDefaults and returns it.
+        
+        let usD = UserDefaults()
+        let savedRuns = usD.value(forKey: runIncrementerSetting)
+        
+        var runs = 0
+        if (savedRuns != nil) {
+            
+            runs = savedRuns as! Int
+        }
+        
+        print("Run Counts are \(runs)")
+        return runs
+        
+    }
+    
+    func showReview() {
+        
+        let runs = getRunCounts()
+        print("Show Review")
+        
+        if (runs > minimumRunCount) {
+            
+            if #available(iOS 10.3, *) {
+                print(askForRatingsFlag)
+                if (askForRatingsFlag != true) {
+                    print("Review Requested")
+                    SKStoreReviewController.requestReview()
+                    askForRatingsFlag = true
+                }
+                
+            } else {
+                // Fallback on earlier versions
+            }
+            
+        } else {
+            
+            print("Runs are not enough to request review!")
+            
+        }
+        
+    }
+
+    
 
 }
 

@@ -11,6 +11,7 @@ target 'Factoids' do
     pod 'SwiftySound'
     pod 'Google-Mobile-Ads-SDK'
     pod 'SRCountdownTimer'
+    pod 'Spring', :git => 'https://github.com/MengTo/Spring.git', :branch => 'swift3'
 
   target 'FactoidsTests' do
     inherit! :search_paths
