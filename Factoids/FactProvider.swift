@@ -8,6 +8,7 @@
 
 import GameKit
 import SwiftySound
+import AudioToolbox
 
 struct FactProvider {
     
@@ -111,6 +112,7 @@ struct FactProvider {
         // resets duplicate checker after game over
         factTracker.removeAll()
         fakeTracker.removeAll()
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
         
     }
     
@@ -139,21 +141,21 @@ struct FactProvider {
         "It's considered rude to write in red ink in Portugal.",
         "Although the bobcat is rarely seen, it is the most common wildcat in North America",
         "A cat's tail contains nearly 10 percent of all the bones in its body.",
-        "Gecko feet have millions of tiny hairs that stick to surfaces with a special chemical bond and let them climb walls and hang on by just one toe.",
+        "Gecko feet have millions of tiny hairs that stick to surfaces and let them climb walls and hang on with a single.",
         "The term \"astronaut\" comes from Greek words that mean \"star\" and \"sailor.\"",
         "The calcium in our bones and the iron in our blood come from ancient explosions of giant stars.",
         "The Nile crocodile can hold its breath underwater for up to 2 hours while waiting for prey.",
-        "Jellyfish, or jellies as scientists call them, are not fish. They have no brain, no heart, and no bones.",
-        "The Chinese giant salamander can grow to be 6 feet (1.8 m) long, making it the largest salamander in the world.",
+        "Jellyfish are not fish. They have no brain, heart, or bones.",
+        "The Chinese giant salamander can grow to be 6 feet long, making it the largest salamander in the world.",
         "People reportedly prefer blue toothbrushes over red ones.",
-        "Some people used to believe that kissing a donkey could relieve a toothache.",
-        "Scientists say that the best time to take a nap is between 1 p.m. and 2:30 p.m. because that's when a dip in body temperature makes us feel sleepy.",
-        "Because the speed of Earth's rotation changes over time, a day in the age of dinosaurs was just 23 hours long.",
+        "People used to believe that kissing a donkey could relieve a toothache.",
+        "Scientists say that the best time to take a nap is between 1 PM and 2:30 PM because that's when a dip in body temperature makes us drowsy.",
+        "A day in the age of dinosaurs was just 23 hours long due to Earth's change in rotation speed.",
         "Hummingbirds' wings can beat 200 times a second.",
-        "A seahorse can move its eyes in opposite directions—all the better to scan the water for food and predators.",
+        "A seahorse can move its eyes in opposite directions to help it look for food and predators.",
         "To cook an egg, a sidewalk needs to be 158°F.",
-        "A group of jellyfish is not a herd, or a school, or a flock; it's called a smack.",
-        "It would take 100 Earths, lined up end-to-end, to stretch across the face of the sun.",
+        "A group of jellyfish is called a smack.",
+        "It would take 100 Earths lined up to stretch around the the sun.",
         "Less than 1 percent of Antarctica is ice-free.",
         "The highest wave ever surfed was as tall as a 10-story building.",
         "The Beagle Brigade, used in 21 international airports in the U.S., keeps a yearly average of 75,000 illegal items out of the country.",
@@ -165,10 +167,10 @@ struct FactProvider {
         "Komodo dragons can devour 5 pounds (2 kg) of meat in less than a minute. Any extra fat they eat is stored in their tails.",
         "Not all moons are dry and dusty like ours. Jupiter's Europa has a liquid ocean under an icy crust.",
         "Some Viking chiefs were buried inside their ships.",
-        "At any moment, clouds cover about 60 percent of Earth.",
-        "All apes laugh when they are tickled.",
-        "Spotted hyenas can digest skin and bones.",
-        "The quills on African porcupines are as long as 3 pencils.",
+        "Clouds cover about 60 percent of Earth at any given moment.",
+        "Apes laugh when they are tickled.",
+        "Some hyenas can digest skin and bones.",
+        "The quills on African porcupines can be over 10 inches long.",
         "Scientists believe that people who dream about an activity will actually get better at it in real life.",
         "Your hair contains traces of gold.",
         "Depending on the speed of the wind, some clouds travel up to 100 miles per hour (160 kph) across the sky.",
@@ -180,11 +182,11 @@ struct FactProvider {
         "There are more possible iterations of a game of chess than there are atoms in the known universe.",
         "It can take a photon 40,000 years to travel from the core of the sun to the surface, but only 8 minutes to travel the rest of the way to earth.",
         "Basically anything that melts can be made into glass. You just have to cool off a molten material before its molecules have time to realign into what they were before being melted.",
-        "A small percentage of the static you see on \"dead\" tv stations is left over radiation from the Big Bang. You're seeing residual effects of the Universe's creation.",
+        "A small percentage of the static you see on \"dead\" tv stations is left over radiation from the Big Bang.",
         "Written language was invented independently by the Egyptians, Sumerians, Chinese, and Mayans.",
         "If you were to remove all of the empty space from the atoms that make up every human on earth, the entire world population could fit into an apple.",
         "Honey does not spoil. You could feasibly eat 3000 year old honey. ",
-        "If you somehow found a way to extract all of the gold from the bubbling core of our lovely little planet, you would be able to cover all of the land in a layer of gold up to your knees.",
+        "If you extracted all the gold from the Earth, you would be able to cover all of the land in a layer of gold up to your knees.",
         "To know when to mate, a male giraffe will continuously headbutt the female in the bladder until she urinates. The male then tastes the pee and that helps it determine whether the female is ovulating. ",
         "The Spanish national anthem has no words.",
         "The state sport of Maryland is jousting. ",
@@ -225,7 +227,6 @@ struct FactProvider {
         "Elephants can produce rumbles through the ground to communicate with each other.",
         "Donald Trump was elected president of the United States.",
         "There is a species of shark that has a lifespan of ~400 years.",
-        "If a baby is born under water, it can live its entire life under water.",
         "The United States created incendiary bombs to be dropped by bats during World War II.",
         "Corn flakes were invented to prevent people from masturbating.",
         "If you are arrested for public urination in California you must register as a sex offender.",
@@ -282,7 +283,6 @@ struct FactProvider {
         "Snoop Dogg got his name after Charlie Brown's Snoopy, his favorite cartoon as a child.",
         "There were originally only ten months in a year.",
         "Pluto is a planet.",
-        "SPAM is short for spiced ham.",
         "Pringles had a lawsuit trying to claim that Pringles weren't potato chips.",
         "'Wasabi' is usually just colored horseradish.",
         "Green peas are a popular pizza topping in Brazil.",
@@ -322,7 +322,9 @@ struct FactProvider {
         "The sound your fingers make when you snap your fingers is just your middle finger hitting your palm.",
         "Much like how humans find puppies cute, elephants think humans are cute.",
         "Many dolphins can create games with actual winners and losers. When dolphins are transferred to different zoos, they teach their new dolphin friends the games they know.",
-        "Squirrels tend to forget where their acorns are buried, inadvertedly planting trees."
+        "Squirrels tend to forget where their acorns are buried, inadvertedly planting trees.",
+        "Sylvester Stallone once sold his dog, Butkus, for $40 for food. He later spent $15,000 to buy the dog back.",
+        "Red Bull was once sued for false advertising because it did not in fact give you wings."
     ]
     
     let fakes = [
@@ -502,10 +504,13 @@ struct FactProvider {
         "Men cannot pee with an erection.",
         "Due to religious disputes, Neil Degrasse Tyson and Bill Nye the Science Guy have an ongoing feud.",
         "Before horses were popular in the United States, nearly 70% of people rode their slaves to the store as the main source of transportation.",
-        "Red Bull was once sued for false advertising because it did not in fact give you wings.",
         "Michael Jordan's net worth increased by nearly $75 million after Space Jam released.",
         "During a televised fight, Bruce Lee once kicked a man so hard his opponent flew out of their shoes and socks. This was the origin of the term 'knock your socks off'.",
         "Squirrels are actually super-intelligent creatures who are plotting to destroy the world.",
-        "North America and South America are actually one big country."
+        "North America and South America are actually one big country.",
+        "Sylvester Stallone was actually born 'Sylvester Cipriani, but changed his last name to Stallone after find out that his father was part horse.",
+        "DJ Khaled pursued a career in philosophy before starting his career in music.",
+        "SPAM is short for spiced ham.",
+        "Lebron James and Kobe Bryant were in a two year feud regarding who would star in Space Jam 2."
     ]
 }

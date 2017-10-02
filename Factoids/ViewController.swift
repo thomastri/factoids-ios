@@ -70,14 +70,14 @@ class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterContr
     
     // MARK:- Timer
     var timer = Timer()
-    var seconds = 10
+    var seconds = 15
     var isTimerRunning = false
     
     // Starts the timer
     func startTimer() {
         isTimerRunning = true
         changeTimerColor()
-        timerAnimation.start(beginingValue: 10, interval: 1)
+        timerAnimation.start(beginingValue: 15, interval: 1)
         timer = Timer.scheduledTimer(timeInterval: 1, target: self,   selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
     }
     
@@ -101,7 +101,7 @@ class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterContr
         // If a timer is running, disable it so two or more timers can't run at the same time
         if isTimerRunning {
             timer.invalidate()
-            seconds = 10
+            seconds = 15
         }
         
         changeBGColor()
@@ -153,8 +153,6 @@ class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterContr
     }
     
     fileprivate func animateWrongFact() {
-        UIView.transition(with: factoidLabel, duration: 0.3, options: .transitionCrossDissolve, animations: { self.factoidLabel.textColor = UIColor.red }, completion: nil)
-        
         factoidLabel.animation = "wobble"
         factoidLabel.animate()
     }
