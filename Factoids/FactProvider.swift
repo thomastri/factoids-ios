@@ -181,13 +181,12 @@ struct FactProvider {
         "Hearing is the fastest human sense. A person can recognize a sound in as little as 0.05 seconds.",
         "There are more possible iterations of a game of chess than there are atoms in the known universe.",
         "It can take a photon 40,000 years to travel from the core of the sun to the surface, but only 8 minutes to travel the rest of the way to earth.",
-        "Basically anything that melts can be made into glass. You just have to cool off a molten material before its molecules have time to realign into what they were before being melted.",
         "A small percentage of the static you see on \"dead\" tv stations is left over radiation from the Big Bang.",
         "Written language was invented independently by the Egyptians, Sumerians, Chinese, and Mayans.",
         "If you were to remove all of the empty space from the atoms that make up every human on earth, the entire world population could fit into an apple.",
-        "Honey does not spoil. You could feasibly eat 3000 year old honey. ",
+        "Honey does not spoil. You could eat 3000 year old honey. ",
         "If you extracted all the gold from the Earth, you would be able to cover all of the land in a layer of gold up to your knees.",
-        "To know when to mate, a male giraffe will continuously headbutt the female in the bladder until she urinates. The male then tastes the pee and that helps it determine whether the female is ovulating. ",
+        "To know when to mate, a male giraffe will continuously headbutt the female in the bladder until she urinates. The male then tastes the pee and that helps it determine whether the female is ovulating.",
         "The Spanish national anthem has no words.",
         "The state sport of Maryland is jousting. ",
         "Dead people can get goose bumps.",
@@ -332,7 +331,33 @@ struct FactProvider {
         "1 in 4 Americans believe the Sun revolves around the Earth.",
         "Facebook has a 'Pirate' language setting.",
         "Many Kenyans practice the sport of naked night-running.",
-        "The shortest basketball player was 3'2 tall."
+        "The shortest basketball player was 3'2 tall.",
+        "Wearing headphones for just one hour will increase bacteria in your ear by 700x.",
+        "About $10 worth of raw popcorn can be sold for ~$1,000 at movie theaters.",
+        "One drop of water contains one hundred billion billion atoms. Wowza.",
+        "If you are an Alaskan citizen over the age of 6 months, you receive a check for $1,000 in oil dividends every year.",
+        "During your lifetime, you'll grow about ~590 miles of hair.",
+        "Coffee beans are actually fruit pits.",
+        "A lightning bolt generates heat five times hotter than the surface of the sun.",
+        "The Bank of America was originally called the Bank of Italy.",
+        "The name 'Wendy' was created in Peter Pan. There are no recorded Wendys before that.",
+        "The 'Hawaiian alphabet' only has 12 letters.",
+        "Only female mosquitos will bite you.",
+        "Mickey Mouse has won an Oscar.",
+        "A 'jiffy' is a real unit of time.",
+        "The cell phone was first invented in 1924.",
+        "Iconic video game character Mario's first ever appearance was in Donkey Kong.",
+        "Prior to the 1960s, men with long hair were not able to enter Disneyland.",
+        "If a butterfly's body temperature drops below 86 F, it will not be able to fly.",
+        "Venus spins in the solar system backwards. Every other planet in our solar system roates the same direction.",
+        "The Yin-Yang symbol originated from Rome.",
+        "Elephants can be pregnant for up to two years.",
+        "Clown fish start off as males but turn into females as they grow.",
+        "It is possible to still get hiccups as a fetus.",
+        "The swastika was originally a symbol of peace by Buddhists.",
+        "Your skin is your biggest organ. Probably.",
+        "Mars is red because it is covered in rust.",
+        "It takes a plastic container about 50,000 years before it starts to decay."
     ]
     
     let fakes = [
@@ -399,7 +424,6 @@ struct FactProvider {
         "We swallow spiders in our sleep. In your lifetime, you will swallow about 11 spiders while sleeping.",
         "Blood is actually blue until it comes in contact with oxygen.",
         "Vin Diesel is from Kenya, but he is albino.",
-        "You weigh less at night because the gravity of the moon is pulling you toward it.",
         "People thought the world was flat until Columbus proved them wrong.",
         "Humans only use 10% of our brains.",
         "25% of the sun is composed of helium, which is why it floats in space.",
@@ -521,6 +545,7 @@ struct FactProvider {
         "SPAM is short for spiced ham.",
         "Lebron James and Kobe Bryant were in a two year feud regarding who would star in Space Jam 2.",
         "Clyde Tombaugh, the man who first discovered Pluto, named Pluto after Mickey Mouse's dog of the same name.",
-        "The Sun revolves around the Earth."
+        "The Sun revolves around the Earth.",
+        "If men deny their existence hard enough, their nipples can disappear."
     ]
 }
