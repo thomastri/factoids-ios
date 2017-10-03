@@ -324,7 +324,15 @@ struct FactProvider {
         "Many dolphins can create games with actual winners and losers. When dolphins are transferred to different zoos, they teach their new dolphin friends the games they know.",
         "Squirrels tend to forget where their acorns are buried, inadvertedly planting trees.",
         "Sylvester Stallone once sold his dog, Butkus, for $40 for food. He later spent $15,000 to buy the dog back.",
-        "Red Bull was once sued for false advertising because it did not in fact give you wings."
+        "Red Bull was once sued for false advertising because it did not in fact give you wings.",
+        "It takes Puto 248 Earth-years to orbit the Sun just once.",
+        "The first Olympic games were held in Olympia, which is how it got its name.",
+        "Rapper Eminem once held an international top 30 score in Donkey Kong.",
+        "Opium used in over 90% of heroin worldwide is produced in Afghanistan.",
+        "1 in 4 Americans believe the Sun revolves around the Earth.",
+        "Facebook has a 'Pirate' language setting.",
+        "Many Kenyans practice the sport of naked night-running.",
+        "The shortest basketball player was 3'2 tall."
     ]
     
     let fakes = [
@@ -511,6 +519,8 @@ struct FactProvider {
         "Sylvester Stallone was actually born 'Sylvester Cipriani', but changed his last name to Stallone after discovering that his father was part horse.",
         "DJ Khaled pursued a career in philosophy before starting his career in music.",
         "SPAM is short for spiced ham.",
-        "Lebron James and Kobe Bryant were in a two year feud regarding who would star in Space Jam 2."
+        "Lebron James and Kobe Bryant were in a two year feud regarding who would star in Space Jam 2.",
+        "Clyde Tombaugh, the man who first discovered Pluto, named Pluto after Mickey Mouse's dog of the same name.",
+        "The Sun revolves around the Earth."
     ]
 }
