@@ -508,7 +508,7 @@ struct FactProvider {
         "During a televised fight, Bruce Lee once kicked a man so hard his opponent flew out of their shoes and socks. This was the origin of the term 'knock your socks off'.",
         "Squirrels are actually super-intelligent creatures who are plotting to destroy the world.",
         "North America and South America are actually one big country.",
-        "Sylvester Stallone was actually born 'Sylvester Cipriani, but changed his last name to Stallone after find out that his father was part horse.",
+        "Sylvester Stallone was actually born 'Sylvester Cipriani', but changed his last name to Stallone after discovering that his father was part horse.",
         "DJ Khaled pursued a career in philosophy before starting his career in music.",
         "SPAM is short for spiced ham.",
         "Lebron James and Kobe Bryant were in a two year feud regarding who would star in Space Jam 2."
