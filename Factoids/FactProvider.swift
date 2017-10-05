@@ -461,7 +461,7 @@ struct FactProvider {
         "If you touch a baby bird, its mother will reject it due to the smell of humans.",
         "Police require a 24-hour waiting period before accepting a missing persons report.",
         "Bats are blind.",
-        "A goldfish has an average memory of about 3 months.",
+        "A goldfish has an average memory of about 3 seconds.",
         "Your hair and nails will continue to grow after you die.",
         "The national seal for the United States was originally a Turkey.",
         "Americans eat more calories on Super Bowl Sunday than the rest of the world combined.",
@@ -547,5 +547,6 @@ struct FactProvider {
         "The Sun revolves around the Earth.",
         "If men deny their existence hard enough, their nipples can disappear.",
         "Facebook Addiction Disorder is an official disorder defined by the American Psychology Association.",
+        "McDonald's brought back its infamous Chicken Selects after a sick Vietnamese boy tweeted them asking about it."
     ]
 }
