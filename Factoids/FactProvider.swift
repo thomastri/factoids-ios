@@ -192,7 +192,6 @@ struct FactProvider {
         "Dead people can get goose bumps.",
         "The dashed lines in between lanes on the road are about 10 feet long.",
         "Crows can caw in different dialects depending on where they are from.",
-        "Bamboo can grow up to three feet in one day",
         "Eating 1,400 Slim Jims in one sitting will kill the average human.",
         "Maine is the closest state to Africa.",
         "The male seahorse gets pregnant instead of the female seahorse.",

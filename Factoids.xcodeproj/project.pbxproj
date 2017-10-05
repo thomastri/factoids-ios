@@ -268,7 +268,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0900;
-				ORGANIZATIONNAME = "Thomas Le";
+				ORGANIZATIONNAME = "Tea Tree Industries";
 				TargetAttributes = {
 					625561AF1F57515200AA1C89 = {
 						CreatedOnToolsVersion = 8.3.3;
