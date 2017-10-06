@@ -355,7 +355,21 @@ struct FactProvider {
         "Mars is red because it is covered in rust.",
         "It takes a plastic container about 50,000 years before it starts to decay.",
         "The nest of a bald eagle can weigh up to 4,000 pounds, or ~1800 kg.",
-        "Austrailla once engaged in a war against emus and lost."
+        "Austrailla once engaged in a war against emus and lost.",
+        "The computer term 'debugging' originated from the early technology days when a bug found in the circuits caused an error on your machine.",
+        "The first minimum wage in the U.S. was $0.25/hr.",
+        "Nintendo produced playing cards before producing video games.",
+        "Humans blink about 4.2 million times a year.",
+        "Chewing gum was invented by the Mayans over 300 years ago.",
+        "The average life span of a taste bud is about 10 days.",
+        "The Amazon rainforest produces about half of Earth's oxygen supply.",
+        "It is considered rude to tip at a restaurant in Iceland.",
+        "Months that start with a Sunday always have a Friday the 13th.",
+        "In a typical deck of cards, the King of Hearts is the only King without a mustache.",
+        "Tomatoes were once referred to as 'love apples' because people were thought to fall in love by eating them.",
+        "There are over 2,000,000 combinations of sandwiches that can be created at Subway.",
+        "Before she was Katy Perry, she was a Christian music singer named Katy Hudson.",
+        "Gamers of popular mobile app 'Game of War' typically spend over $500 each."
     ]
     
     let fakes = [
@@ -547,6 +561,27 @@ struct FactProvider {
         "If men deny their existence hard enough, their nipples can disappear.",
         "Facebook Addiction Disorder is an official disorder defined by the American Psychology Association.",
         "McDonald's brought back its infamous Chicken Selects after a sick Vietnamese boy tweeted them asking about it.",
-        "News isn't called news because it is new information. It's because information comes from all directions: North, East, West, and South."
+        "News isn't called news because it is new information. It's because information comes from all directions: North, East, West, and South.",
+        "The Atlantic Ocean has the highest salt content of all oceans in the world because of the salty attitudes of America's East coast.",
+        "Nickelback makes over $2 million every year on royalties for their memes.",
+        "Nicolas Cage is the only living American who has met the Greek God Zeus.",
+        "A typical $10,000 Rolex watch costs only ~$55 to make.",
+        "Ford was the first company to introduce a three-point seat belt required in modern cars today.",
+        "Most koala bears are female.",
+        "Mens' ring fingers will always be longer than their index fingers, while womens' fingers are vice versa.",
+        "A U.S. cop will typically eat 36 donuts a month.",
+        "The first aquarium in the Cananda featured 'mermaids'.",
+        "Steve Jobs is often credited for coming up with Star Wars before George Lucas.",
+        "Tangerines are classified as berries, not citrus.",
+        "Philadelphia has the largest population of hobo-gangs.",
+        "The average person chews gum for 18 minutes before spitting it out.",
+        "Hawaii citizens have an average lifespan of over 15 years more than the rest of the world.",
+        "The chances of two snowflakes being the same are actually about 1 in 8,000.",
+        "The Amazon Alexa has already replaced 15% of American jobs.",
+        "11% of Canadians identify as part Moose.",
+        "Elon Musk publicly identifies as a Martian.",
+        "Bill Gates heavily advises against space exploration. He recommends instead we focus on improving the planet we already have.",
+        "Half of all Europeans are born in a fast food restaurant.",
+        "Dong Nguyen made over $20 million for his hit app Flappy Bird in the span of one year."
     ]
 }

@@ -28,7 +28,6 @@ class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterContr
      */
     @IBOutlet weak var factoidLabel: SpringLabel!
     @IBOutlet weak var factoidButton: UIButton!
-    @IBOutlet weak var factoidNumber: UILabel!
     @IBOutlet weak var factoidScore: UILabel!
     @IBOutlet weak var factoidFakeButton: UIButton!
     @IBOutlet weak var highScore: UILabel!
@@ -52,8 +51,6 @@ class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterContr
         
         factoidLabel.text = factProvider.randomFact()
         highScore.text = "High Score: \(factProvider.updateAndGetHighScore())"
-        
-        factoidNumber.text = "Factoid #\(factProvider.getFactNum()):"
         
         changeColors()
         
@@ -108,8 +105,6 @@ class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterContr
         
         factOrFake = factProvider.getFactOrFake() // 0 or 1 for random fact
         factoidLabel.text = factProvider.randomFact() // re-rolls factOrFake, presents a fact
-        
-        factoidNumber.text = "Factoid #\(factProvider.getFactNum()):"
         
         changeTextColor()
         
@@ -171,7 +166,6 @@ class ViewController: UIViewController, GADBannerViewDelegate, GKGameCenterContr
     
     fileprivate func changeTextColor() {
         factoidLabel.textColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true)
-        factoidNumber.textColor = UIColor(contrastingBlackOrWhiteColorOn: view.backgroundColor, isFlat: true, alpha: 0.5)
     }
     
     fileprivate func changeScoreColor() {
