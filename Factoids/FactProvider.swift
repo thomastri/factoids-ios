@@ -546,6 +546,7 @@ struct FactProvider {
         "The Sun revolves around the Earth.",
         "If men deny their existence hard enough, their nipples can disappear.",
         "Facebook Addiction Disorder is an official disorder defined by the American Psychology Association.",
-        "McDonald's brought back its infamous Chicken Selects after a sick Vietnamese boy tweeted them asking about it."
+        "McDonald's brought back its infamous Chicken Selects after a sick Vietnamese boy tweeted them asking about it.",
+        "News isn't called news because it is new information. It's because information comes from all directions: North, East, West, and South."
     ]
 }
